@@ -2,7 +2,7 @@
 
 > Tools, papers, benchmarks, talks, and practical guides for building and running AI inference systems.
 
-Find material on LLM serving, inference engines, GPU kernels, attention and KV-cache optimization, distributed inference, multimodal workloads, and performance testing. The list is for engineers, researchers, and operators working on inference, from model execution to production deployment.
+Explore LLM inference and serving, from model execution and GPU kernel optimization to distributed deployment, multimodal inference, and performance benchmarking. This list brings together open-source engines, research, benchmarks, and practical guides for engineers building and operating production inference systems.
 
 <a id="contents"></a>
 
