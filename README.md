@@ -95,24 +95,6 @@ Why a model that fits in memory can still run slowly.
 
 [← Back to index](#contents)
 
-<a id="foundations-fundamentals-attention"></a>
-
-#### Attention
-
-- [flash-attention](https://github.com/Dao-AILab/flash-attention) - Practical implementation of IO-aware attention.
-
-<a id="foundations-fundamentals-kv-cache"></a>
-
-#### KV cache
-
-- [vllm](https://github.com/vllm-project/vllm) - Serving engine popularizing paged KV-cache management.
-
-<a id="foundations-fundamentals-prefill-and-decode"></a>
-
-#### Prefill and decode
-
-- [sglang](https://github.com/sgl-project/sglang) - Runtime with optimized scheduling and caching.
-
 <a id="foundations-fundamentals-tokenization"></a>
 
 #### Tokenization
@@ -161,14 +143,7 @@ Architecture determines execution graphs, cache requirements and parallelism opt
 
 #### Attention variants
 
-- [flash-attention](https://github.com/Dao-AILab/flash-attention) - Attention kernel implementations.
 - [How Attention Got So Efficient: GQA, MLA, DSA](https://youtu.be/Y-o545eYjXM) - Video tracing attention from grouped-query to multi-latent and DeepSeek sparse attention.
-
-<a id="foundations-model-architectures-efficient-transformers"></a>
-
-#### Efficient transformers
-
-- [xformers](https://github.com/facebookresearch/xformers) - Transformer building blocks and attention operators.
 
 <a id="foundations-model-architectures-state-space-models"></a>
 
@@ -200,37 +175,17 @@ Choose hardware by memory capacity, bandwidth, interconnect and software compati
 
 [← Back to index](#contents)
 
-<a id="foundations-hardware-nvidia"></a>
-
-#### NVIDIA
-
-- [cuda-samples](https://github.com/NVIDIA/cuda-samples) - CUDA programming examples.
-- [cutlass](https://github.com/NVIDIA/cutlass) - High-performance GPU matrix operations.
-
 <a id="foundations-hardware-amd"></a>
 
 #### AMD
 
 - [ROCm](https://rocm.docs.amd.com/en/latest/) - ROCm software platform for AMD accelerators.
-- [aiter](https://github.com/ROCm/aiter) - Inference-focused GPU operators.
 
 <a id="foundations-hardware-apple-silicon"></a>
 
 #### Apple Silicon
 
 - [mlx](https://github.com/ml-explore/mlx) - Array framework optimized for Apple Silicon.
-
-<a id="foundations-hardware-collectives"></a>
-
-#### Collectives
-
-- [nccl](https://github.com/NVIDIA/nccl) - GPU collective communication library.
-
-<a id="foundations-hardware-kubernetes-gpus"></a>
-
-#### Kubernetes GPUs
-
-- [gpu-operator](https://github.com/NVIDIA/gpu-operator) - Automated NVIDIA GPU software stack on Kubernetes.
 
 <a id="foundations-hardware-accelerator-architecture"></a>
 
@@ -400,19 +355,6 @@ Serving systems for mixed model types and modalities.
 - [onnxruntime](https://github.com/microsoft/onnxruntime) - Portable inference runtime for ONNX models.
 - [TensorRT](https://github.com/NVIDIA/TensorRT) - Optimizing compiler/runtime for NVIDIA inference.
 
-<a id="engines-multimodal-serving-multimodal"></a>
-
-#### Multimodal
-
-- [diffusers](https://github.com/huggingface/diffusers) - Diffusion inference pipelines and optimizations.
-- [ComfyUI](https://github.com/comfyanonymous/ComfyUI) - Node-based orchestration for image/video model workflows.
-
-<a id="engines-multimodal-serving-text-and-embedding"></a>
-
-#### Text and embedding
-
-- [sentence-transformers](https://github.com/UKPLab/sentence-transformers) - Embedding and reranker model toolkit.
-
 <a id="engines-multimodal-serving-omni-modal-serving"></a>
 
 #### Omni-modal serving
@@ -446,18 +388,6 @@ Compiler stacks and execution backends that enable efficient inference.
 
 - [tvm](https://github.com/apache/tvm) - Machine learning compiler framework.
 - [iree](https://github.com/iree-org/iree) - Compiler and runtime for portable model deployment.
-
-<a id="engines-runtimes-compilers-kernel-runtime"></a>
-
-#### Kernel runtime
-
-- [flashinfer](https://github.com/flashinfer-ai/flashinfer) - Inference attention and auxiliary GPU kernels.
-
-<a id="engines-runtimes-compilers-cuda-alternatives"></a>
-
-#### CUDA alternatives
-
-- [ROCm](https://rocm.docs.amd.com/en/latest/) - AMD GPU software stack.
 
 <a id="engines-runtimes-compilers-python-kernel-dsls"></a>
 
@@ -501,23 +431,11 @@ Implementations for reducing memory traffic and improving attention execution.
 - [flashinfer](https://github.com/flashinfer-ai/flashinfer) - Inference-specialized attention primitives.
 - [xformers](https://github.com/facebookresearch/xformers) - Efficient attention and transformer operations.
 
-<a id="optimization-attention-kernels-gpu-math"></a>
-
-#### GPU math
-
-- [cutlass](https://github.com/NVIDIA/cutlass) - Composable GPU math operators.
-
 <a id="optimization-attention-kernels-amd-kernels"></a>
 
 #### AMD kernels
 
 - [aiter](https://github.com/ROCm/aiter) - AMD inference operators.
-
-<a id="optimization-attention-kernels-kernel-programming"></a>
-
-#### Kernel programming
-
-- [triton](https://github.com/triton-lang/triton) - GPU kernel language used for custom optimizations.
 
 <a id="optimization-kv-cache"></a>
 
@@ -527,49 +445,21 @@ How attention state is stored, reused, transferred, compressed, and released.
 
 [← Back to index](#contents)
 
-<a id="optimization-kv-cache-paged-cache"></a>
-
-#### Paged cache
-
-- [vllm](https://github.com/vllm-project/vllm) - Runtime with paged KV-cache abstractions.
-
-<a id="optimization-kv-cache-prefix-caching"></a>
-
-#### Prefix caching
-
-- [sglang](https://github.com/sgl-project/sglang) - Runtime with prefix reuse and efficient serving.
-
 <a id="optimization-kv-cache-cache-offload"></a>
 
-#### Cache offload
+#### Offloading and tiering
 
 - [LMCache](https://github.com/LMCache/LMCache) - KV-cache storage and reuse across tiers.
-
-<a id="optimization-kv-cache-disaggregated-cache"></a>
-
-#### Disaggregated cache
-
-- [Mooncake](https://github.com/kvcache-ai/Mooncake) - Cache-centric infrastructure for disaggregated inference.
-
-<a id="optimization-kv-cache-distributed-serving"></a>
-
-#### Distributed serving
-
-- [llm-d](https://github.com/llm-d/llm-d) - Infrastructure integrating cache-aware routing and serving.
-
-<a id="optimization-kv-cache-offload-and-tiering"></a>
-
-#### Offload and tiering
-
 - [vLLM KV Offloading Connector](https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html) - Offloading KV-cache to CPU DRAM and tuning host-to-device throughput.
 - [PrisKV](https://aibrix.github.io/posts/2025-11-26-priskv-intro/) - Colocated, tiered KV-cache store from the AIBrix project.
 - [How to Reduce KV Cache Bottlenecks with NVIDIA Dynamo](https://developer.nvidia.com/blog/how-to-reduce-kv-cache-bottlenecks-with-nvidia-dynamo/) - KV-cache offload and reuse in Dynamo.
 
 <a id="optimization-kv-cache-cache-quantization"></a>
 
-#### Cache quantization
+#### KV-cache quantization
 
 - [Optimizing Inference with NVFP4 KV Cache](https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/) - FP4 KV-cache for long contexts and large batches.
+- [PQCache](https://sky-light.eecs.berkeley.edu/#/blog/pqcache) - Product quantization of the KV-cache for long-context inference.
 
 <a id="optimization-kv-cache-prompt-caching"></a>
 
@@ -585,29 +475,11 @@ Techniques for sharing accelerator cycles across uneven request workloads.
 
 [← Back to index](#contents)
 
-<a id="optimization-batching-scheduling-continuous-batching"></a>
+<a id="optimization-batching-scheduling-guides"></a>
 
-#### Continuous batching
+#### Guides
 
-- [vllm](https://github.com/vllm-project/vllm) - Serving and request scheduler implementations.
-
-<a id="optimization-batching-scheduling-scheduling"></a>
-
-#### Scheduling
-
-- [sglang](https://github.com/sgl-project/sglang) - Efficient request processing and caching.
-
-<a id="optimization-batching-scheduling-production-patterns"></a>
-
-#### Production patterns
-
-- [production-stack](https://github.com/vllm-project/production-stack) - Deployment and autoscaling patterns for vLLM.
-
-<a id="optimization-batching-scheduling-simulation"></a>
-
-#### Simulation
-
-- [vidur](https://github.com/microsoft/vidur) - LLM inference performance simulator.
+- [Inside Nano-vLLM (Part 1)](https://neutree.ai/blog/nano-vllm-part-1) - Scheduling, batching and memory management in a minimal vLLM reimplementation.
 
 <a id="optimization-speculative-decoding"></a>
 
@@ -628,13 +500,6 @@ Propose several tokens at once, then verify them to reduce decode time.
 #### Multiple heads
 
 - [Medusa](https://github.com/FasterDecoding/Medusa) - Multiple decoding heads for candidate token generation.
-
-<a id="optimization-speculative-decoding-engine-integration"></a>
-
-#### Engine integration
-
-- [vllm](https://github.com/vllm-project/vllm) - Serving implementation with decoding optimizations.
-- [sglang](https://github.com/sgl-project/sglang) - Runtime supporting advanced decoding optimizations.
 
 <a id="optimization-speculative-decoding-training-free-drafting"></a>
 
@@ -687,12 +552,6 @@ Lower memory bandwidth and storage requirements while preserving acceptable qual
 #### Compression
 
 - [llm-compressor](https://github.com/vllm-project/llm-compressor) - LLM quantization and compression toolkit.
-
-<a id="optimization-quantization-edge-formats"></a>
-
-#### Edge formats
-
-- [llama.cpp](https://github.com/ggml-org/llama.cpp) - Quantized formats and implementations for portable inference.
 
 <a id="optimization-quantization-low-precision-formats"></a>
 
@@ -787,12 +646,6 @@ Serve long prompts without letting prefill time or KV-cache growth dominate cost
 
 - [Optimizing Long-Context Prefill on Older GPU Nodes](https://moreh.io/blog/optimizing-long-context-prefill-on-multiple-older-generation-gpu-nodes-251226/) - Distributing long-context prefill across older-generation GPUs.
 
-<a id="optimization-long-context-kv-compression"></a>
-
-#### KV compression
-
-- [PQCache](https://sky-light.eecs.berkeley.edu/#/blog/pqcache) - Product quantization of the KV-cache for long-context inference.
-
 <a id="optimization-determinism"></a>
 
 ### 3.8 Determinism and numerics
@@ -864,12 +717,6 @@ Distributed inference across GPUs and nodes, including the cost of communication
 
 - [nccl](https://github.com/NVIDIA/nccl) - GPU collective communication.
 
-<a id="production-distributed-inference-cache-tiers"></a>
-
-#### Cache tiers
-
-- [LMCache](https://github.com/LMCache/LMCache) - KV-cache lifecycle and reuse.
-
 <a id="production-distributed-inference-disaggregation-in-practice"></a>
 
 #### Disaggregation in practice
@@ -935,12 +782,6 @@ Route requests among models and backends while meeting budgets and SLOs.
 #### Kubernetes inference routing
 
 - [gateway-api-inference-extension](https://github.com/kubernetes-sigs/gateway-api-inference-extension) - Inference-specific routing APIs for Kubernetes Gateway API.
-
-<a id="production-gateways-routing-distributed-routing"></a>
-
-#### Distributed routing
-
-- [llm-d](https://github.com/llm-d/llm-d) - Cache and load-aware routing patterns.
 
 <a id="production-gateways-routing-gateway"></a>
 
@@ -1175,13 +1016,6 @@ Benchmark with representative workloads and report enough detail for others to r
 
 - [aiperf](https://github.com/ai-dynamo/aiperf) - Generative AI load testing, trace replay and SLO analysis.
 
-<a id="production-benchmarking-engine-suite"></a>
-
-#### Engine suite
-
-- [vllm](https://github.com/vllm-project/vllm) - Built-in serving benchmark scripts.
-- [sglang](https://github.com/sgl-project/sglang) - Serving benchmark tools.
-
 <a id="production-benchmarking-quality"></a>
 
 #### Model-quality evaluation
@@ -1193,12 +1027,6 @@ Benchmark with representative workloads and report enough detail for others to r
 #### Industry performance benchmark
 
 - [inference](https://github.com/mlcommons/inference) - MLPerf Inference benchmarks.
-
-<a id="production-benchmarking-simulation"></a>
-
-#### Simulation
-
-- [vidur](https://github.com/microsoft/vidur) - Predictive performance simulation for LLM serving.
 
 <a id="production-benchmarking-comparative-toolkit"></a>
 
@@ -1244,24 +1072,6 @@ Use benchmark results to estimate GPU capacity and serving costs.
 
 - [vidur](https://github.com/microsoft/vidur) - Estimate LLM serving behavior across configurations.
 
-<a id="production-capacity-planning-serving-metrics"></a>
-
-#### Serving metrics
-
-- [vllm](https://github.com/vllm-project/vllm) - Runtime metrics and memory accounting.
-
-<a id="production-capacity-planning-benchmarks"></a>
-
-#### Benchmarks
-
-- [aiperf](https://github.com/ai-dynamo/aiperf) - SLO-aware load testing and performance data.
-
-<a id="production-capacity-planning-local-measurements"></a>
-
-#### Local measurements
-
-- [llama.cpp](https://github.com/ggml-org/llama.cpp) - Includes local benchmarks and memory-conscious runtime.
-
 <a id="production-capacity-planning-cost-and-energy-analysis"></a>
 
 #### Cost and energy analysis
@@ -1278,30 +1088,6 @@ Use benchmark results to estimate GPU capacity and serving costs.
 Keep model servers available during failures and overload, including in multi-tenant deployments.
 
 [← Back to index](#contents)
-
-<a id="production-reliability-security-gateway-protection"></a>
-
-#### Gateway protection
-
-- [Agent Router (formerly Envoy AI Gateway)](https://github.com/theagentrouter/agent-router) - Traffic controls for AI endpoints.
-
-<a id="production-reliability-security-policy-and-routing"></a>
-
-#### Policy and routing
-
-- [gateway-api-inference-extension](https://github.com/kubernetes-sigs/gateway-api-inference-extension) - Kubernetes inference traffic interfaces.
-
-<a id="production-reliability-security-serving-health"></a>
-
-#### Serving health
-
-- [kserve](https://github.com/kserve/kserve) - Deployment readiness and lifecycle patterns.
-
-<a id="production-reliability-security-monitoring"></a>
-
-#### Monitoring
-
-- [prometheus](https://github.com/prometheus/prometheus) - Alerting inputs for resource and service health.
 
 <a id="production-reliability-security-supply-chain-security"></a>
 
@@ -1335,11 +1121,6 @@ Protect prompts, outputs, and weights from infrastructure operators. Track model
 #### Trusted execution
 
 - [Confidential Compute for AI Inference with TEEs](https://chutes.ai/news/confidential-compute-for-ai-inference-how-chutes-delivers-verifiable-privacy-with-trusted-execution-environments) - Verifiable private inference on untrusted, permissionless GPU providers.
-
-<a id="production-confidential-inference-model-provenance"></a>
-
-#### Model provenance
-
 
 <a id="production-case-studies"></a>
 
@@ -1432,18 +1213,6 @@ Inference for image encoders, detectors, vision-language models and video stream
 
 - [opencv](https://github.com/opencv/opencv) - Image/video processing and inference integrations.
 
-<a id="modalities-vision-onnx"></a>
-
-#### ONNX
-
-- [onnxruntime](https://github.com/microsoft/onnxruntime) - Portable execution for vision graphs.
-
-<a id="modalities-vision-multimodal-models"></a>
-
-#### Multimodal models
-
-- [transformers](https://github.com/huggingface/transformers) - Vision-language model architectures and processors.
-
 <a id="modalities-diffusion"></a>
 
 ### 5.3 Image and video diffusion inference
@@ -1469,18 +1238,6 @@ Optimize the denoising loop, scheduler, attention, memory and decoding stages.
 #### Video models
 
 - [CogVideo](https://github.com/THUDM/CogVideo) - Video-generation model implementations.
-
-<a id="modalities-diffusion-kernels"></a>
-
-#### Kernels
-
-- [flash-attention](https://github.com/Dao-AILab/flash-attention) - Optimized attention applicable to some diffusion components.
-
-<a id="modalities-diffusion-general-runtime"></a>
-
-#### General runtime
-
-- [TensorRT](https://github.com/NVIDIA/TensorRT) - Inference optimizations for supported diffusion architectures.
 
 <a id="modalities-diffusion-serving-engines"></a>
 
@@ -1511,24 +1268,6 @@ Serve non-generative and ranking models efficiently.
 - [sentence-transformers](https://github.com/UKPLab/sentence-transformers) - Embeddings and cross-encoder reranking.
 - [FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding) - Embedding and reranking model implementations.
 
-<a id="modalities-embeddings-general-runtime"></a>
-
-#### General runtime
-
-- [onnxruntime](https://github.com/microsoft/onnxruntime) - Optimized inference for exported encoders.
-
-<a id="modalities-embeddings-text-inference"></a>
-
-#### Text inference
-
-- [CTranslate2](https://github.com/OpenNMT/CTranslate2) - Inference for transformer sequence models.
-
-<a id="modalities-embeddings-benchmarking"></a>
-
-#### Benchmarking
-
-- [aiperf](https://github.com/ai-dynamo/aiperf) - Benchmarking supports embedding-oriented endpoints.
-
 <a id="learning"></a>
 
 ## 6. Learning
@@ -1540,42 +1279,6 @@ Serve non-generative and ranking models efficiently.
 Papers grouped by the inference bottleneck they address.
 
 [← Back to index](#contents)
-
-<a id="learning-papers-efficient-attention"></a>
-
-#### Efficient attention
-
-- [flash-attention](https://github.com/Dao-AILab/flash-attention) - Code and references for FlashAttention papers.
-
-<a id="learning-papers-serving"></a>
-
-#### Serving
-
-- [vllm](https://github.com/vllm-project/vllm) - PagedAttention and vLLM paper references.
-
-<a id="learning-papers-speculative-decoding"></a>
-
-#### Speculative decoding
-
-- [EAGLE](https://github.com/SafeAILab/EAGLE) - EAGLE research and implementations.
-
-<a id="learning-papers-quantization"></a>
-
-#### Quantization
-
-- [llm-awq](https://github.com/mit-han-lab/llm-awq) - Activation-aware quantization research.
-
-<a id="learning-papers-disaggregation"></a>
-
-#### Disaggregation
-
-- [Mooncake](https://github.com/kvcache-ai/Mooncake) - Disaggregated cache infrastructure research.
-
-<a id="learning-papers-simulation"></a>
-
-#### Simulation
-
-- [vidur](https://github.com/microsoft/vidur) - Serving simulation research and implementation.
 
 <a id="learning-papers-kv-cache-systems"></a>
 
@@ -1617,42 +1320,11 @@ Self-paced courses and practical walkthroughs.
 
 - [LLM Inference at Scale](https://github.com/harshuljain13/llm-inference-at-scale) - A production-focused guide to serving LLMs, from inference fundamentals to optimization and deployment.
 
-<a id="learning-tutorials-vllm"></a>
-
-#### vLLM
-
-- [vllm](https://github.com/vllm-project/vllm) - Examples and documentation for serving and benchmarking.
-
 <a id="learning-tutorials-sglang"></a>
 
 #### SGLang
 
-- [sglang](https://github.com/sgl-project/sglang) - Runtime and performance tutorials.
 - [SGLang Cookbook](https://cookbook.sglang.io/) - Recipes for deploying specific models and features with SGLang.
-
-<a id="learning-tutorials-inference-kernels"></a>
-
-#### Inference kernels
-
-- [triton](https://github.com/triton-lang/triton) - Triton kernel tutorials.
-
-<a id="learning-tutorials-tensorrt-llm"></a>
-
-#### TensorRT-LLM
-
-- [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) - Serving and optimized runtime examples.
-
-<a id="learning-tutorials-local-inference"></a>
-
-#### Local inference
-
-- [llama.cpp](https://github.com/ggml-org/llama.cpp) - Local model execution and benchmarks.
-
-<a id="learning-tutorials-distributed"></a>
-
-#### Distributed
-
-- [llm-d](https://github.com/llm-d/llm-d) - Distributed inference architecture examples.
 
 <a id="learning-engine-internals"></a>
 
@@ -1666,7 +1338,6 @@ Guides for reading inference-engine source code.
 
 #### Minimal engines
 
-- [Inside Nano-vLLM (Part 1)](https://neutree.ai/blog/nano-vllm-part-1) - Scheduling, batching and memory management in a minimal vLLM reimplementation.
 - [mini-sglang](https://github.com/sgl-project/mini-sglang) - Compact educational reimplementation of SGLang.
 - [vLLM-Style Inference Engine from Scratch on CPU](https://medium.com/@alaminibrahim433/vllm-style-fast-inference-engine-building-from-scratch-on-cpu-1f2a1f31f02a) - Implementing PagedAttention and continuous batching by hand.
 
