@@ -189,7 +189,7 @@ Architecture determines execution graphs, cache requirements and parallelism opt
 
 #### Diffusion language models
 
-- [SGLang dLLM RFC](https://github.com/sgl-project/sglang/pull/12766) - Design proposal for serving block-diffusion language models in SGLang.
+- [SGLang dLLM RFC](https://github.com/sgl-project/sglang/issues/12766) - Design proposal for serving block-diffusion language models in SGLang.
 - [TiDAR](https://arxiv.org/abs/2511.08923) - Hybrid that drafts tokens with diffusion and commits them autoregressively.
 
 <a id="foundations-hardware"></a>
@@ -211,7 +211,7 @@ Choose hardware by memory capacity, bandwidth, interconnect and software compati
 
 #### AMD
 
-- [ROCm](https://github.com/ROCm/ROCm) - ROCm software platform for AMD accelerators.
+- [ROCm](https://rocm.docs.amd.com/en/latest/) - ROCm software platform for AMD accelerators.
 - [aiter](https://github.com/ROCm/aiter) - Inference-focused GPU operators.
 
 <a id="foundations-hardware-apple-silicon"></a>
@@ -457,7 +457,7 @@ Compiler stacks and execution backends that enable efficient inference.
 
 #### CUDA alternatives
 
-- [ROCm](https://github.com/ROCm/ROCm) - AMD GPU software stack.
+- [ROCm](https://rocm.docs.amd.com/en/latest/) - AMD GPU software stack.
 
 <a id="engines-runtimes-compilers-python-kernel-dsls"></a>
 
@@ -928,7 +928,7 @@ Route requests among models and backends while meeting budgets and SLOs.
 
 #### Envoy ecosystem
 
-- [ai-gateway](https://github.com/envoyproxy/ai-gateway) - AI request routing using Envoy infrastructure.
+- [Agent Router (formerly Envoy AI Gateway)](https://github.com/theagentrouter/agent-router) - AI request routing using Envoy infrastructure.
 
 <a id="production-gateways-routing-kubernetes"></a>
 
@@ -1283,7 +1283,7 @@ Keep model servers available during failures and overload, including in multi-te
 
 #### Gateway protection
 
-- [ai-gateway](https://github.com/envoyproxy/ai-gateway) - Traffic controls for AI endpoints.
+- [Agent Router (formerly Envoy AI Gateway)](https://github.com/theagentrouter/agent-router) - Traffic controls for AI endpoints.
 
 <a id="production-reliability-security-policy-and-routing"></a>
 
