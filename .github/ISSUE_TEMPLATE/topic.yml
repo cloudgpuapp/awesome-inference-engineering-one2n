@@ -1,0 +1,17 @@
+name: Suggest a topic or improvement
+description: Propose a new category, comparison or curated learning path
+title: "Topic: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Which inference engineering problem does it solve?
+    validations:
+      required: true
