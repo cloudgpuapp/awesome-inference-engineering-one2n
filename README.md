@@ -1597,24 +1597,6 @@ Talks, slides, and discussions about inference systems.
 
 [← Back to index](#contents)
 
-<a id="learning-talks-systems-conferences"></a>
-
-#### Systems conferences
-
-- [inference](https://github.com/mlcommons/inference) - Industry performance measurement and related materials.
-
-<a id="learning-talks-framework-talks"></a>
-
-#### Framework talks
-
-- [vllm](https://github.com/vllm-project/vllm) - Project docs and community resources.
-
-<a id="learning-talks-hardware-talks"></a>
-
-#### Hardware talks
-
-- [cuda-samples](https://github.com/NVIDIA/cuda-samples) - Entry point for CUDA concepts before specialist profiling talks.
-
 <a id="learning-talks-recorded-engine-talks"></a>
 
 #### Recorded engine talks
