@@ -87,16 +87,6 @@ Learn how a model computes, how a serving system runs it, and how to measure per
 
 - [ai-infra-book](https://github.com/bojieli/ai-infra-book) - Quantitative treatment of AI systems and infrastructure.
 
-<a id="foundations-learning-roadmaps-key-concepts"></a>
-
-#### Key concepts
-
-- Start with tokenization, embeddings and attention.
-- Trace prefill and token-by-token decode through a model.
-- Measure first-token latency, decode speed and peak memory.
-- Compare two engines with a controlled workload.
-- Add queueing, GPU monitoring and cost accounting.
-
 <a id="foundations-fundamentals"></a>
 
 ### 1.2 Inference fundamentals
@@ -146,16 +136,6 @@ Why a model that fits in memory can still run slowly.
 - [KV Cache in LLM Inference](https://pub.towardsai.net/kv-cache-in-llm-inference-7b904a2a6982) - Why caching keys and values removes redundant computation during decode.
 - [How Do MoE Models Compare to Dense Models in Inference?](https://epoch.ai/gradient-updates/moe-vs-dense-models-inference) - Inference cost and decode dynamics of mixture-of-experts versus dense models.
 - [Top 5 AI Model Optimization Techniques](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Vendor overview of model-level optimizations for inference latency and cost.
-
-<a id="foundations-fundamentals-key-concepts"></a>
-
-#### Key concepts
-
-- Prefill builds attention state for input tokens; decode generates output tokens incrementally.
-- KV-cache memory scales with active tokens, layers, KV heads, head dimension and element size.
-- TTFT, TPOT/ITL, throughput, goodput and p99 latency answer different questions.
-- Contrast memory bandwidth limits with compute throughput using roofline reasoning.
-- Test dynamic batching, chunked prefill, cancellation and cache reuse.
 
 <a id="foundations-model-architectures"></a>
 
@@ -211,16 +191,6 @@ Architecture determines execution graphs, cache requirements and parallelism opt
 
 - [SGLang dLLM RFC](https://github.com/sgl-project/sglang/pull/12766) - Design proposal for serving block-diffusion language models in SGLang.
 - [TiDAR](https://arxiv.org/abs/2511.08923) - Hybrid that drafts tokens with diffusion and commits them autoregressively.
-
-<a id="foundations-model-architectures-key-concepts"></a>
-
-#### Key concepts
-
-- Compare MHA, MQA, GQA and MLA on KV-cache size and kernel requirements.
-- Distinguish dense and MoE compute, memory and communication bottlenecks.
-- Cover encoder-only, encoder-decoder, decoder-only and hybrid models.
-- Explain diffusion sampling as repeated denoising rather than autoregressive decoding.
-- Note that linear-attention and hybrid models replace a growing KV-cache with fixed-size state, which changes memory planning.
 
 <a id="foundations-hardware"></a>
 
@@ -280,16 +250,6 @@ Choose hardware by memory capacity, bandwidth, interconnect and software compati
 
 - [The Case for Co-Designing Model Architectures with Hardware](https://arxiv.org/abs/2401.14489) - Shows that hardware-aligned model shapes improve runtime without hurting accuracy.
 - [Analog In-Memory Computing Attention](https://www.nature.com/articles/s43588-025-00854-1) - Research on in-memory computing hardware for the attention mechanism.
-
-<a id="foundations-hardware-key-concepts"></a>
-
-#### Key concepts
-
-- Document HBM or unified memory, effective bandwidth and accelerator precision support.
-- Cover NVIDIA, AMD, Apple, CPU, TPU and specialist inference accelerators.
-- Explain PCIe versus NVLink and RDMA for multi-GPU or multi-node serving.
-- Note that platform compatibility must be checked against engine versions.
-- Compare SRAM-heavy and HBM-based designs on model capacity per chip versus bandwidth per token.
 
 <a id="foundations-gpu-kernel-programming"></a>
 
@@ -361,16 +321,6 @@ Learn the execution model well enough to read, write and debug inference kernels
 - [Automating Algorithm Discovery: Kernel Generation](https://adrs-ucb.notion.site/datadog) - Case study on automated search for GPU kernel algorithms.
 - [FlashInfer-Bench paper](https://arxiv.org/abs/2601.00227) - Closed loop connecting generated kernels, benchmarks and serving-engine integration.
 
-<a id="foundations-gpu-kernel-programming-key-concepts"></a>
-
-#### Key concepts
-
-- Learn the memory hierarchy (registers, shared memory, L2, HBM) before tuning.
-- Use roofline reasoning to decide whether a kernel is memory-bound or compute-bound.
-- Check occupancy, coalescing, bank conflicts and tensor-core utilization with a profiler.
-- Validate numerics against a reference implementation before measuring speed.
-- Treat agent-generated kernels as untrusted until tested across shapes, dtypes and edge cases.
-
 <a id="engines"></a>
 
 ## 2. Engines
@@ -434,14 +384,6 @@ General-purpose and specialized runtimes for serving language models.
 - [PowerInfer](https://github.com/SJTU-IPADS/PowerInfer) - Consumer-GPU engine exploiting activation sparsity across GPU and CPU.
 - [AirLLM](https://github.com/lyogavin/airllm) - Layer-by-layer loading that runs large models on small GPUs at the cost of latency.
 
-<a id="engines-llm-serving-key-concepts"></a>
-
-#### Key concepts
-
-- Do not compare raw throughput without fixing model, precision, prompt/output lengths and hardware.
-- Record supported architectures, parallelism, API shape, cache features and hardware support.
-- Differentiate a model server from a kernel library or model manager.
-
 <a id="engines-multimodal-serving"></a>
 
 ### 2.2 Multimodal and general serving
@@ -477,14 +419,6 @@ Serving systems for mixed model types and modalities.
 
 - [vllm-omni](https://github.com/vllm-project/vllm-omni) - vLLM extension for serving models that mix text, image, audio and video.
 - [cornserve](https://github.com/cornserve-ai/cornserve) - Serving system that splits multimodal pipelines into independently scaled components.
-
-<a id="engines-multimodal-serving-key-concepts"></a>
-
-#### Key concepts
-
-- Capture per-modality latency objectives and output metrics.
-- Explain preprocessing, batching and postprocessing costs.
-- Separate model execution from web UI or workflow orchestration.
 
 <a id="engines-runtimes-compilers"></a>
 
@@ -547,13 +481,6 @@ Compiler stacks and execution backends that enable efficient inference.
 - [ISPC](https://ispc.github.io/index.html) - Intel's implicit-SPMD compiler for SIMD CPU and GPU code.
 - [Inside VOLT](https://arxiv.org/abs/2511.13751) - Open-source compiler design for open GPU architectures with custom ISAs.
 
-<a id="engines-runtimes-compilers-key-concepts"></a>
-
-#### Key concepts
-
-- Cover operator fusion, graph capture, launch overhead and kernel autotuning.
-- Be explicit about the distinction between Triton language and Triton Inference Server.
-
 <a id="optimization"></a>
 
 ## 3. Optimization
@@ -591,13 +518,6 @@ Implementations for reducing memory traffic and improving attention execution.
 #### Kernel programming
 
 - [triton](https://github.com/triton-lang/triton) - GPU kernel language used for custom optimizations.
-
-<a id="optimization-attention-kernels-key-concepts"></a>
-
-#### Key concepts
-
-- Compare prefill and decode kernel shapes.
-- Track batch size, sequence length, head dimension, precision and GPU generation.
 
 <a id="optimization-kv-cache"></a>
 
@@ -657,15 +577,6 @@ How attention state is stored, reused, transferred, compressed, and released.
 
 - [Prompt Caching](https://ngrok.com/blog/prompt-caching/) - Practical explanation of how provider-side prompt caching works and when it pays off.
 
-<a id="optimization-kv-cache-key-concepts"></a>
-
-#### Key concepts
-
-- Compute KV bytes/token = 2 × layers × KV heads × head dimension × bytes/element (per sequence, absent sharing/compression).
-- Measure cache hit rate, eviction, CPU/GPU transfer cost and latency impact.
-- Distinguish prefix sharing from speculative decode and cache quantization.
-- Offload pays off only when transfer time is lower than recomputing the reused prefix.
-
 <a id="optimization-batching-scheduling"></a>
 
 ### 3.3 Batching and scheduling
@@ -697,14 +608,6 @@ Techniques for sharing accelerator cycles across uneven request workloads.
 #### Simulation
 
 - [vidur](https://github.com/microsoft/vidur) - LLM inference performance simulator.
-
-<a id="optimization-batching-scheduling-key-concepts"></a>
-
-#### Key concepts
-
-- Continuous batching and chunked prefill are different scheduling techniques.
-- Test SLO-aware admission, cancellations, long-prefill interference and bursty arrivals.
-- Measure goodput, not just aggregate token throughput.
 
 <a id="optimization-speculative-decoding"></a>
 
@@ -746,14 +649,6 @@ Propose several tokens at once, then verify them to reduce decode time.
 - [speculators](https://github.com/vllm-project/speculators) - Library for building, evaluating and packaging speculative decoding models for vLLM.
 - [Speculators: Production-Ready Speculative Decoding](https://developers.redhat.com/articles/2025/11/19/speculators-standardized-production-ready-speculative-decoding) - Why the speculators library standardizes draft-model formats.
 - [Spec-Bench](https://github.com/hemingkx/Spec-Bench) - Unified benchmark for comparing speculative decoding methods.
-
-<a id="optimization-speculative-decoding-key-concepts"></a>
-
-#### Key concepts
-
-- Track acceptance length and acceptance rate.
-- Report both draft overhead and verifier cost.
-- Measure end-to-end speedups with actual prompt and generation distributions.
 
 <a id="optimization-quantization"></a>
 
@@ -832,15 +727,6 @@ Lower memory bandwidth and storage requirements while preserving acceptable qual
 - [BitNet](https://github.com/microsoft/BitNet) - Inference framework for 1-bit (ternary) LLMs.
 - [LLM Pruning Collection](https://github.com/zlab-princeton/llm-pruning-collection) - Pruning implementations and evaluation scripts for LLMs.
 
-<a id="optimization-quantization-key-concepts"></a>
-
-#### Key concepts
-
-- Explain FP16/BF16, FP8, FP4, INT8 and INT4 without assuming support is universal.
-- Measure memory, speed, accuracy and load times on target hardware.
-- Separate weight-only, activation and KV-cache quantization.
-- Confirm MX/NVFP4 support in both the GPU generation and the serving engine's kernels.
-
 <a id="optimization-constrained-decoding"></a>
 
 ### 3.6 Constrained decoding and sampling
@@ -873,15 +759,6 @@ Constrain token selection for structured output and tool calls while keeping thr
 #### Sampling kernels
 
 - [Sorting-Free GPU Kernels for LLM Sampling](https://flashinfer.ai/2025/03/10/sampling.html) - Top-k/top-p sampling on GPU without a full sort.
-
-<a id="optimization-constrained-decoding-key-concepts"></a>
-
-#### Key concepts
-
-- Grammar backends differ in schema compile time, per-token mask cost and schema coverage.
-- Measure TTFT with cold and warm grammar caches; compilation can dominate short requests.
-- Test interaction with speculative decoding, batching and streaming tool-call parsing.
-- Track invalid-output and tool-call parse failure rates, not only latency.
 
 <a id="optimization-long-context"></a>
 
@@ -916,15 +793,6 @@ Serve long prompts without letting prefill time or KV-cache growth dominate cost
 
 - [PQCache](https://sky-light.eecs.berkeley.edu/#/blog/pqcache) - Product quantization of the KV-cache for long-context inference.
 
-<a id="optimization-long-context-key-concepts"></a>
-
-#### Key concepts
-
-- KV-cache grows linearly with context; dense attention prefill compute grows quadratically.
-- Compare chunked prefill, context parallelism and sparse or linear attention on TTFT and memory.
-- Validate quality at the target length after any context-extension or compression method.
-- Account for long-prefill interference with the decode latency of co-scheduled requests.
-
 <a id="optimization-determinism"></a>
 
 ### 3.8 Determinism and numerics
@@ -953,15 +821,6 @@ Understand when and why identical requests produce different outputs.
 
 - [Why Stochastic Rounding is Essential](https://cloud.google.com/blog/topics/developers-practitioners/why-stochastic-rounding-is-essential-for-modern-generative-ai) - Stochastic rounding for quality in low-precision arithmetic.
 - [Future Leakage in Block-Quantized Attention](https://matx.com/research/leaky_quantization) - How block quantization can leak future-token information into causal attention.
-
-<a id="optimization-determinism-key-concepts"></a>
-
-#### Key concepts
-
-- Floating-point addition is not associative; batch size and kernel choice change reduction order.
-- Batch-invariant kernels trade some throughput for reproducibility; measure that cost.
-- Pin engine, kernel library, driver and GPU type when determinism is a requirement.
-- RL rollouts need numerically matched inference and training stacks.
 
 <a id="production"></a>
 
@@ -1051,15 +910,6 @@ Distributed inference across GPUs and nodes, including the cost of communication
 
 - [Distributed Inference on Heterogeneous Accelerators](https://moreh.io/blog/distributed-inference-on-heterogeneous-accelerators-including-gpus-rubin-cpx-and-ai-accelerators-250923/) - Splitting inference across mixed AMD and NVIDIA hardware.
 
-<a id="production-distributed-inference-key-concepts"></a>
-
-#### Key concepts
-
-- Tensor, pipeline, data, context and expert parallelism solve different constraints.
-- Cover prefill/decode disaggregation and communication paths.
-- Include routing affinity, failures, stragglers and topology awareness.
-- Size expert-parallel all-to-all traffic against interconnect bandwidth before choosing wide EP.
-
 <a id="production-gateways-routing"></a>
 
 ### 4.2 Gateways and routing
@@ -1120,13 +970,6 @@ Route requests among models and backends while meeting budgets and SLOs.
 #### Inference proxies
 
 - [optillm](https://github.com/algorithmicsuperintelligence/optillm) - OpenAI-compatible proxy that applies inference-time reasoning techniques to improve answers.
-
-<a id="production-gateways-routing-key-concepts"></a>
-
-#### Key concepts
-
-- Discuss model selection, backend routing and token admission separately.
-- Cover cache affinity, backpressure, fairness, retries and timeout budgets.
 
 <a id="production-orchestration"></a>
 
@@ -1193,13 +1036,6 @@ Deploy, update, and manage inference services.
 - [kvcached](https://github.com/ovg-project/kvcached) - Elastic, virtualized KV-cache that lets multiple models share a GPU.
 - [kv-marketplace](https://github.com/neelsomani/kv-marketplace) - Experimental cross-GPU KV-cache sharing.
 
-<a id="production-orchestration-key-concepts"></a>
-
-#### Key concepts
-
-- Document cold starts, rolling upgrades, canaries and graceful draining.
-- Track accelerator scheduling, topology and multi-tenancy.
-
 <a id="production-managed-kubernetes"></a>
 
 ### 4.4 Managed Kubernetes inference (EKS, GKE, AKS)
@@ -1260,17 +1096,6 @@ Provider-specific guides for serving models on Amazon EKS, Google GKE and Azure 
 #### Cross-cloud
 
 - [llm-d Infrastructure & Environments](https://llm-d.ai/docs/infrastructure) - Provider-specific cluster notes for running llm-d on GKE, AKS and other platforms.
-
-<a id="production-managed-kubernetes-key-concepts"></a>
-
-#### Key concepts
-
-- Check accelerator quota and regional availability before designing; GPU and TPU capacity is often the binding constraint.
-- Decide who owns drivers and device plugins: cloud-managed node pools versus the NVIDIA GPU Operator.
-- Measure cold start end to end: node provisioning, image pull, weight download and engine warm-up.
-- Autoscale on inference-server signals (queue depth, KV-cache use) rather than GPU utilization alone.
-- Compare provider gateways (GKE Inference Gateway, KAITO) with portable options such as llm-d and the Gateway API Inference Extension before committing.
-- Cloud docs change quickly; pin the doc date and component versions when recording a setup.
 
 <a id="production-observability"></a>
 
@@ -1335,14 +1160,6 @@ Monitor model requests, queues, and accelerator use.
 #### Reference setups
 
 - [vllm-concurrency-demo](https://github.com/Regan-Milne/vllm-concurrency-demo) - Single-GPU vLLM concurrency tests with Prometheus and Grafana dashboards.
-
-<a id="production-observability-key-concepts"></a>
-
-#### Key concepts
-
-- Instrument TTFT, TPOT/ITL, tokens/s, queue depth, running/waiting requests, cache occupancy and OOMs.
-- Compare model-side token timings with client-observed stream timings.
-- Use Nsight Systems and Nsight Compute official documentation for deep NVIDIA profiling (not necessarily GitHub repos).
 
 <a id="production-benchmarking"></a>
 
@@ -1413,15 +1230,6 @@ Benchmark with representative workloads and report enough detail for others to r
 
 - [Evaluation Guidebook](https://huggingface.co/spaces/OpenEvals/evaluation-guidebook) - Hugging Face guide to designing and interpreting model evaluations.
 
-<a id="production-benchmarking-key-concepts"></a>
-
-#### Key concepts
-
-- Record GPU model, CPU, memory, software versions, engine revision, model revision and precision.
-- Test input/output length distributions, warm/cold cache, concurrency and request-rate sweeps.
-- Report TTFT, TPOT, p50/p95/p99 latency, requests/sec, tokens/sec, errors and goodput.
-- Mark vendor-reported numbers versus independently reproduced results.
-
 <a id="production-capacity-planning"></a>
 
 ### 4.7 Capacity planning and economics
@@ -1462,15 +1270,6 @@ Use benchmark results to estimate GPU capacity and serving costs.
 - [Energy Use of AI Inference](https://arxiv.org/abs/2509.20241) - Per-query energy estimates and efficiency pathways at scale.
 - [GPU (In)efficiency in AI Workloads](https://www.anyscale.com/blog/gpu-in-efficiency-in-ai-workloads) - Why production GPUs sit underutilized.
 - [Revealing the Hidden Economics of Open Models](https://www.linuxfoundation.org/blog/revealing-the-hidden-economics-of-open-models-in-the-ai-era) - MIT and Linux Foundation research on open-model economics.
-
-<a id="production-capacity-planning-key-concepts"></a>
-
-#### Key concepts
-
-- Weight memory ≈ parameter count × bytes/weight, before quantization metadata or extra buffers.
-- KV-cache memory depends on live token counts, KV heads, precision and reuse.
-- Capacity estimates require a concrete SLO and workload distribution.
-- Track $/million input and output tokens separately when appropriate.
 
 <a id="production-reliability-security"></a>
 
@@ -1523,15 +1322,6 @@ Keep model servers available during failures and overload, including in multi-te
 
 - [HaluGate](https://blog.vllm.ai/2025/12/14/halugate.html) - Token-level hallucination detection in the vLLM serving path.
 
-<a id="production-reliability-security-key-concepts"></a>
-
-#### Key concepts
-
-- SLOs and error budgets; queue saturation; admission control; request cancellation.
-- GPU OOM recovery, node draining, partial-stream errors and model startup failures.
-- Tenant isolation, artifact integrity, secrets, privacy and auditability.
-- Chaos testing of GPU disappearance, cache backend failure and gateway overload.
-
 <a id="production-confidential-inference"></a>
 
 ### 4.9 Confidential inference and model provenance
@@ -1550,15 +1340,6 @@ Protect prompts, outputs, and weights from infrastructure operators. Track model
 
 #### Model provenance
 
-
-<a id="production-confidential-inference-key-concepts"></a>
-
-#### Key concepts
-
-- CPU TEEs combined with GPU confidential-computing modes extend protection to accelerator memory; check support per GPU generation.
-- Remote attestation only helps if the client verifies it.
-- Measure overhead from encrypted CPU–GPU transfers, especially model loading and KV offload.
-- Combine with supply-chain controls such as artifact signing.
 
 <a id="production-case-studies"></a>
 
@@ -1593,14 +1374,6 @@ Case studies of large inference deployments. Most come from vendors, so treat th
 #### KV caching
 
 - [GMI Cloud 4x TTFT with TensorMesh](https://www.gmicloud.ai/blog/gmi-cloud-achieves-4x-llm-performance-boost-with-tensormesh) - SSD-backed prefix caching for lower TTFT (vendor-reported).
-
-<a id="production-case-studies-key-concepts"></a>
-
-#### Key concepts
-
-- Extract workload shape, hardware, SLO and baseline before comparing claims.
-- Separate gains from hardware generation, precision changes and software changes.
-- Prefer write-ups that disclose failure modes and operational trade-offs.
 
 <a id="modalities"></a>
 
@@ -1639,13 +1412,6 @@ Streaming speech recognition, synthesis and latency-sensitive audio inference.
 
 - [silero-vad](https://github.com/snakers4/silero-vad) - Lightweight voice activity detection.
 
-<a id="modalities-audio-key-concepts"></a>
-
-#### Key concepts
-
-- Separate model computation, stream chunking, audio encoding and network costs.
-- Track real-time factor, time to first audio, underruns, quality and concurrent streams.
-
 <a id="modalities-vision"></a>
 
 ### 5.2 Vision inference
@@ -1677,13 +1443,6 @@ Inference for image encoders, detectors, vision-language models and video stream
 #### Multimodal models
 
 - [transformers](https://github.com/huggingface/transformers) - Vision-language model architectures and processors.
-
-<a id="modalities-vision-key-concepts"></a>
-
-#### Key concepts
-
-- Document resize/crop preprocessing, batch sizes, image token expansion and output decoding.
-- Report frames/sec, latency, accuracy and memory usage.
 
 <a id="modalities-diffusion"></a>
 
@@ -1737,14 +1496,6 @@ Optimize the denoising loop, scheduler, attention, memory and decoding stages.
 
 - [Productionizing Diffusion Models](https://a-r-r-o-w.github.io/blog/3_blossom/00001_productionizing_diffusion-1/) - Taking diffusion models from research code to production serving.
 
-<a id="modalities-diffusion-key-concepts"></a>
-
-#### Key concepts
-
-- Measure end-to-end generation latency, steps/sec, output resolution, frames and peak memory.
-- Include scheduler choices, step caching, VAE decode and model offload.
-- Do not use tokens/sec as the main metric for video diffusion workloads.
-
 <a id="modalities-embeddings"></a>
 
 ### 5.4 Embedding and reranking inference
@@ -1777,13 +1528,6 @@ Serve non-generative and ranking models efficiently.
 #### Benchmarking
 
 - [aiperf](https://github.com/ai-dynamo/aiperf) - Benchmarking supports embedding-oriented endpoints.
-
-<a id="modalities-embeddings-key-concepts"></a>
-
-#### Key concepts
-
-- Track queries/sec, batch size, sequence length, latency and embedding accuracy.
-- Distinguish bi-encoder throughput from cross-encoder reranking cost.
 
 <a id="learning"></a>
 
@@ -1845,13 +1589,6 @@ Papers grouped by the inference bottleneck they address.
 
 - [Parallel CPU-GPU Execution for LLM Inference on Constrained GPUs](https://arxiv.org/abs/2506.03296) - Offloading KV-cache and attention to the CPU during decode.
 
-<a id="learning-papers-key-concepts"></a>
-
-#### Key concepts
-
-- Reading queue: Attention Is All You Need; FlashAttention series; PagedAttention/vLLM; Orca; Sarathi-Serve; DistServe; Splitwise; Mooncake; GPTQ; AWQ; Medusa; EAGLE.
-- Each future entry should include year, paper, code, core contribution and when it applies.
-
 <a id="learning-talks"></a>
 
 ### 6.2 Talks and conferences
@@ -1888,14 +1625,6 @@ Talks, slides, and discussions about inference systems.
 - [Inside the MAX Framework](https://www.youtube.com/watch?v=WK5dVQ8vhbU) - Modular meetup walkthrough of the MAX inference stack.
 - [How to Make vLLM 13x Faster with LMCache + NVIDIA Dynamo](https://www.youtube.com/watch?v=iuoOpOQkURo) - Hands-on KV-cache reuse demo; reproduce the speedup on your workload.
 
-<a id="learning-talks-key-concepts"></a>
-
-#### Key concepts
-
-- Curate individual verified talks from MLSys, OSDI, SOSP, NSDI, ISCA, ASPLOS and GTC.
-- Record presenter, year, link, duration and whether slides or code are available.
-- Avoid adding conference homepages as substitutes for an actual talk recording.
-
 <a id="learning-tutorials"></a>
 
 ### 6.3 Tutorials and guides
@@ -1903,6 +1632,8 @@ Talks, slides, and discussions about inference systems.
 Self-paced courses and practical walkthroughs.
 
 [← Back to index](#contents)
+
+- [LLM Inference at Scale](https://github.com/harshuljain13/llm-inference-at-scale) - A production-focused guide to serving LLMs, from inference fundamentals to optimization and deployment.
 
 <a id="learning-tutorials-vllm"></a>
 
@@ -1941,13 +1672,6 @@ Self-paced courses and practical walkthroughs.
 
 - [llm-d](https://github.com/llm-d/llm-d) - Distributed inference architecture examples.
 
-<a id="learning-tutorials-key-concepts"></a>
-
-#### Key concepts
-
-- Label tutorials by required hardware and difficulty.
-- Prefer runnable examples with pinned versions and expected measurements.
-
 <a id="learning-engine-internals"></a>
 
 ### 6.4 Engine internals
@@ -1973,14 +1697,6 @@ Guides for reading inference-engine source code.
 - [GPU Model Runner V2](https://github.com/vllm-project/vllm/pull/25266) - Pull request redesigning vLLM's model runner and input preparation.
 - [vllm-daily](https://github.com/vllm-project/vllm-daily) - Daily summaries of merged vLLM pull requests.
 
-<a id="learning-engine-internals-key-concepts"></a>
-
-#### Key concepts
-
-- Trace one request from API server through scheduler, model runner, sampler and detokenizer.
-- Map where KV blocks are allocated, freed and evicted.
-- Compare a minimal reimplementation against the production engine to see what scale adds.
-
 <a id="learning-courses"></a>
 
 ### 6.5 Courses and books
@@ -2004,13 +1720,6 @@ Longer courses and books on inference systems.
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - TPU/GPU architecture, communication and parallelism for training and inference.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Interactive guide to parallelism strategies and communication patterns.
 - [Build an LLM from Scratch with MAX](https://llm.modular.com/) - Interactive tutorial on LLM internals using Modular's MAX.
-
-<a id="learning-courses-key-concepts"></a>
-
-#### Key concepts
-
-- Pair each course with a lab on hardware you can actually access.
-- Scaling books emphasize training; apply their communication math to inference parallelism.
 
 <a id="contributing"></a>
 
