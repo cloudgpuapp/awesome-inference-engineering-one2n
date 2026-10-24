@@ -33,7 +33,7 @@ Include paper title, publication year, link, code if available, technical contri
 
 ## Benchmark submissions
 
-Follow [the benchmark reporting recipe](README.md#benchmark-reporting-recipe). Supply accelerator, model revision, precision, serving engine/commit, input-output distributions, concurrency or offered QPS, caching state, methodology, dates and measurements.
+For benchmark submissions, supply the accelerator, model revision, precision, serving engine and commit, input/output distributions, concurrency or offered QPS, cache state, methodology, date, and measurements.
 
 ## Review checklist
 
@@ -45,4 +45,4 @@ Follow [the benchmark reporting recipe](README.md#benchmark-reporting-recipe). S
 
 Maintainers may decline submissions to keep the list curated rather than exhaustive.
 
-Use the [resource submission template](README.md#resource-submission-template) when proposing additions. Run `python .github/scripts/check_internal_links.py` to check local files and section anchors.
+Run `python .github/scripts/check_internal_links.py` to check local files and section anchors.
