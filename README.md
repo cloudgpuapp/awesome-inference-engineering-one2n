@@ -64,8 +64,6 @@ Explore LLM inference and serving, from model execution and GPU kernel optimizat
 
 Learn how a model computes, how a serving system runs it, and how to measure performance.
 
-[← Back to index](#contents)
-
 <a id="foundations-learning-roadmaps-introductory-code"></a>
 
 #### Introductory code
@@ -92,8 +90,6 @@ Learn how a model computes, how a serving system runs it, and how to measure per
 ### 1.2 Inference fundamentals
 
 Why a model that fits in memory can still run slowly.
-
-[← Back to index](#contents)
 
 <a id="foundations-fundamentals-tokenization"></a>
 
@@ -124,8 +120,6 @@ Why a model that fits in memory can still run slowly.
 ### 1.3 Model architectures
 
 Architecture determines execution graphs, cache requirements and parallelism options.
-
-[← Back to index](#contents)
 
 <a id="foundations-model-architectures-transformer-implementations"></a>
 
@@ -173,8 +167,6 @@ Architecture determines execution graphs, cache requirements and parallelism opt
 
 Choose hardware by memory capacity, bandwidth, interconnect and software compatibility.
 
-[← Back to index](#contents)
-
 <a id="foundations-hardware-amd"></a>
 
 #### AMD
@@ -211,8 +203,6 @@ Choose hardware by memory capacity, bandwidth, interconnect and software compati
 ### 1.5 GPU kernel programming
 
 Learn the execution model well enough to read, write and debug inference kernels.
-
-[← Back to index](#contents)
 
 <a id="foundations-gpu-kernel-programming-execution-model-and-architecture"></a>
 
@@ -286,8 +276,6 @@ Learn the execution model well enough to read, write and debug inference kernels
 
 General-purpose and specialized runtimes for serving language models.
 
-[← Back to index](#contents)
-
 <a id="engines-llm-serving-server-oriented"></a>
 
 #### Server-oriented
@@ -345,8 +333,6 @@ General-purpose and specialized runtimes for serving language models.
 
 Serving systems for mixed model types and modalities.
 
-[← Back to index](#contents)
-
 <a id="engines-multimodal-serving-general-serving"></a>
 
 #### General serving
@@ -367,8 +353,6 @@ Serving systems for mixed model types and modalities.
 ### 2.3 Runtimes and compilers
 
 Compiler stacks and execution backends that enable efficient inference.
-
-[← Back to index](#contents)
 
 <a id="engines-runtimes-compilers-gpu-programming"></a>
 
@@ -421,8 +405,6 @@ Compiler stacks and execution backends that enable efficient inference.
 
 Implementations for reducing memory traffic and improving attention execution.
 
-[← Back to index](#contents)
-
 <a id="optimization-attention-kernels-attention"></a>
 
 #### Attention
@@ -442,8 +424,6 @@ Implementations for reducing memory traffic and improving attention execution.
 ### 3.2 KV-cache management
 
 How attention state is stored, reused, transferred, compressed, and released.
-
-[← Back to index](#contents)
 
 <a id="optimization-kv-cache-cache-offload"></a>
 
@@ -473,8 +453,6 @@ How attention state is stored, reused, transferred, compressed, and released.
 
 Techniques for sharing accelerator cycles across uneven request workloads.
 
-[← Back to index](#contents)
-
 <a id="optimization-batching-scheduling-guides"></a>
 
 #### Guides
@@ -486,8 +464,6 @@ Techniques for sharing accelerator cycles across uneven request workloads.
 ### 3.4 Speculative decoding
 
 Propose several tokens at once, then verify them to reduce decode time.
-
-[← Back to index](#contents)
 
 <a id="optimization-speculative-decoding-draft-tree"></a>
 
@@ -520,8 +496,6 @@ Propose several tokens at once, then verify them to reduce decode time.
 ### 3.5 Quantization and compression
 
 Lower memory bandwidth and storage requirements while preserving acceptable quality.
-
-[← Back to index](#contents)
 
 <a id="optimization-quantization-awq"></a>
 
@@ -592,8 +566,6 @@ Lower memory bandwidth and storage requirements while preserving acceptable qual
 
 Constrain token selection for structured output and tool calls while keeping throughput in view.
 
-[← Back to index](#contents)
-
 <a id="optimization-constrained-decoding-guided-decoding"></a>
 
 #### Guided decoding
@@ -625,8 +597,6 @@ Constrain token selection for structured output and tool calls while keeping thr
 
 Serve long prompts without letting prefill time or KV-cache growth dominate cost.
 
-[← Back to index](#contents)
-
 <a id="optimization-long-context-position-encoding"></a>
 
 #### Position encoding
@@ -651,8 +621,6 @@ Serve long prompts without letting prefill time or KV-cache growth dominate cost
 ### 3.8 Determinism and numerics
 
 Understand when and why identical requests produce different outputs.
-
-[← Back to index](#contents)
 
 <a id="optimization-determinism-batch-invariance"></a>
 
@@ -684,8 +652,6 @@ Understand when and why identical requests produce different outputs.
 ### 4.1 Distributed inference
 
 Distributed inference across GPUs and nodes, including the cost of communication.
-
-[← Back to index](#contents)
 
 <a id="production-distributed-inference-distributed-inference"></a>
 
@@ -763,8 +729,6 @@ Distributed inference across GPUs and nodes, including the cost of communication
 
 Route requests among models and backends while meeting budgets and SLOs.
 
-[← Back to index](#contents)
-
 <a id="production-gateways-routing-model-gateway"></a>
 
 #### Model gateway
@@ -817,8 +781,6 @@ Route requests among models and backends while meeting budgets and SLOs.
 ### 4.3 Deployment and orchestration
 
 Deploy, update, and manage inference services.
-
-[← Back to index](#contents)
 
 <a id="production-orchestration-kubernetes-serving"></a>
 
@@ -883,8 +845,6 @@ Deploy, update, and manage inference services.
 
 Provider-specific guides for serving models on Amazon EKS, Google GKE and Azure AKS.
 
-[← Back to index](#contents)
-
 <a id="production-managed-kubernetes-amazon-eks"></a>
 
 #### Amazon EKS
@@ -943,8 +903,6 @@ Provider-specific guides for serving models on Amazon EKS, Google GKE and Azure 
 ### 4.5 Observability and profiling
 
 Monitor model requests, queues, and accelerator use.
-
-[← Back to index](#contents)
 
 <a id="production-observability-gpu-monitoring"></a>
 
@@ -1008,8 +966,6 @@ Monitor model requests, queues, and accelerator use.
 
 Benchmark with representative workloads and report enough detail for others to reproduce the results.
 
-[← Back to index](#contents)
-
 <a id="production-benchmarking-load-testing"></a>
 
 #### Load testing
@@ -1064,8 +1020,6 @@ Benchmark with representative workloads and report enough detail for others to r
 
 Use benchmark results to estimate GPU capacity and serving costs.
 
-[← Back to index](#contents)
-
 <a id="production-capacity-planning-simulator"></a>
 
 #### Simulator
@@ -1086,8 +1040,6 @@ Use benchmark results to estimate GPU capacity and serving costs.
 ### 4.8 Reliability, security, and output safety
 
 Keep model servers available during failures and overload, including in multi-tenant deployments.
-
-[← Back to index](#contents)
 
 <a id="production-reliability-security-supply-chain-security"></a>
 
@@ -1114,8 +1066,6 @@ Keep model servers available during failures and overload, including in multi-te
 
 Protect prompts, outputs, and weights from infrastructure operators. Track model origins and changes.
 
-[← Back to index](#contents)
-
 <a id="production-confidential-inference-trusted-execution"></a>
 
 #### Trusted execution
@@ -1127,8 +1077,6 @@ Protect prompts, outputs, and weights from infrastructure operators. Track model
 ### 4.10 Production case studies
 
 Case studies of large inference deployments. Most come from vendors, so treat their performance figures as vendor-reported unless independently reproduced.
-
-[← Back to index](#contents)
 
 <a id="production-case-studies-low-latency-agents"></a>
 
@@ -1166,8 +1114,6 @@ Case studies of large inference deployments. Most come from vendors, so treat th
 
 Streaming speech recognition, synthesis and latency-sensitive audio inference.
 
-[← Back to index](#contents)
-
 <a id="modalities-audio-asr"></a>
 
 #### ASR
@@ -1199,8 +1145,6 @@ Streaming speech recognition, synthesis and latency-sensitive audio inference.
 
 Inference for image encoders, detectors, vision-language models and video streams.
 
-[← Back to index](#contents)
-
 <a id="modalities-vision-detection"></a>
 
 #### Detection
@@ -1218,8 +1162,6 @@ Inference for image encoders, detectors, vision-language models and video stream
 ### 5.3 Image and video diffusion inference
 
 Optimize the denoising loop, scheduler, attention, memory and decoding stages.
-
-[← Back to index](#contents)
 
 <a id="modalities-diffusion-pipelines"></a>
 
@@ -1259,8 +1201,6 @@ Optimize the denoising loop, scheduler, attention, memory and decoding stages.
 
 Serve non-generative and ranking models efficiently.
 
-[← Back to index](#contents)
-
 <a id="modalities-embeddings-embedding-models"></a>
 
 #### Embedding models
@@ -1277,8 +1217,6 @@ Serve non-generative and ranking models efficiently.
 ### 6.1 Research papers
 
 Papers grouped by the inference bottleneck they address.
-
-[← Back to index](#contents)
 
 <a id="learning-papers-kv-cache-systems"></a>
 
@@ -1298,8 +1236,6 @@ Papers grouped by the inference bottleneck they address.
 
 Talks, slides, and discussions about inference systems.
 
-[← Back to index](#contents)
-
 <a id="learning-talks-recorded-engine-talks"></a>
 
 #### Recorded engine talks
@@ -1316,7 +1252,6 @@ Talks, slides, and discussions about inference systems.
 
 Self-paced courses and practical walkthroughs.
 
-[← Back to index](#contents)
 
 - [LLM Inference at Scale](https://github.com/harshuljain13/llm-inference-at-scale) - A production-focused guide to serving LLMs, from inference fundamentals to optimization and deployment.
 
@@ -1331,8 +1266,6 @@ Self-paced courses and practical walkthroughs.
 ### 6.4 Engine internals
 
 Guides for reading inference-engine source code.
-
-[← Back to index](#contents)
 
 <a id="learning-engine-internals-minimal-engines"></a>
 
@@ -1355,8 +1288,6 @@ Guides for reading inference-engine source code.
 ### 6.5 Courses and books
 
 Longer courses and books on inference systems.
-
-[← Back to index](#contents)
 
 <a id="learning-courses-university-courses"></a>
 
