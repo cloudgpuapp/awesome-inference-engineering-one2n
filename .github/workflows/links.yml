@@ -14,7 +14,7 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: '--verbose --no-progress --max-retries 2 --max-concurrency 8 --timeout 20 --accept 403,429 --exclude-path .github --exclude "^https://github.com/org/repo$" "**/*.md"'
+          args: '--verbose --no-progress --max-retries 2 --max-concurrency 8 --timeout 20 --accept 200..=299,403,429 --exclude-path .github --exclude "^https://github.com/org/repo$" "**/*.md"'
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
