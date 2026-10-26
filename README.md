@@ -9,12 +9,10 @@ The sections follow the models and performance, hardware, software, inference te
 
 - [1. Models and performance](#models-and-performance)
   - [1.1 Inference fundamentals](#inference-fundamentals)
-  - [1.2 Transformer and LLM architecture](#transformer-and-llm-architecture)
-  - [1.3 Mixture of experts and emerging architectures](#emerging-architectures)
-  - [1.4 Image and video models](#image-and-video-models)
-  - [1.5 Bottleneck analysis](#bottleneck-analysis)
-  - [1.6 Attention optimization](#attention-optimization)
-  - [1.7 Model selection, evaluation and compression](#model-strategy)
+  - [1.2 Image and video models](#image-and-video-models)
+  - [1.3 Bottleneck analysis](#bottleneck-analysis)
+  - [1.4 Attention optimization](#attention-optimization)
+  - [1.5 Model selection, evaluation and compression](#model-strategy)
 - [2. Hardware](#hardware)
   - [2.1 GPU architecture](#gpu-architecture)
   - [2.2 Accelerators by vendor](#accelerators-by-vendor)
@@ -89,9 +87,9 @@ The request path, prefill and decode phases, KV cache and the latency metrics us
 - [AI Model Optimization Techniques](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) -  Overview of model-level optimizations for inference latency and cost.
 - [KV Cache in LLM Inference](https://sebastianraschka.com/faq/docs/kv-cache.html) - Why KV cache is important in LLM inference
 
-<a id="emerging-architectures"></a>
+<a id="image-and-video-models"></a>
 
-### 1.4 Image and video models
+### 1.2 Image and video models
 
 Diffusion, few-step generation and video models, covering the architecture side. Serving resources are in [Image and video generation](#image-and-video-generation).
 
@@ -102,7 +100,7 @@ Diffusion, few-step generation and video models, covering the architecture side.
 
 <a id="bottleneck-analysis"></a>
 
-### 1.5 Bottleneck analysis
+### 1.3 Bottleneck analysis
 
 Ops-to-byte ratio, arithmetic intensity and the roofline model for deciding whether a workload is compute- or memory-bound.
 
@@ -113,7 +111,7 @@ Ops-to-byte ratio, arithmetic intensity and the roofline model for deciding whet
 
 <a id="attention-optimization"></a>
 
-### 1.6 Attention optimization
+### 1.4 Attention optimization
 
 FlashAttention, PagedAttention and attention variants that cut the memory and compute cost of attention.
 
@@ -126,7 +124,7 @@ FlashAttention, PagedAttention and attention variants that cut the memory and co
 
 <a id="model-strategy"></a>
 
-### 1.7 Model selection, evaluation and compression
+### 1.5 Model selection, evaluation and compression
 
 How to chose a model, finetuning, reducing the overall size through pruning. 
 
@@ -253,7 +251,7 @@ Programming models, instruction sets and examples for NVIDIA and AMD GPUs, plus 
 - [HIP Documentation](https://rocm.docs.amd.com/projects/HIP/en/latest/) - Official HIP programming model reference for AMD GPUs.
 - [AMD CDNA 3 Instruction Set Architecture](https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/instruction-set-architectures/amd-instinct-mi300-cdna3-instruction-set-architecture.pdf) - Official reference for the MI300 instruction set.
 - [rocm-examples](https://github.com/ROCm/rocm-examples) - Examples for HIP and ROCm libraries.
-- [Blocks, Threads, and Kernels: A Deeper Dive](https://vanshnawander.github.io/vansh/posts/blocks-threads-kernels.html) - Thread hierarchy, block organization and kernel launch mechanics.
+- [Blocks, Threads, and Kernels: A Deeper Dive](https://vanshnawander.github.io/vansh/posts/blocks-threads-kernels.html) - Thread hierarchy, block organizatin and kernel launch mechanics.
 - [Reduction (Sum) Series: Part 1](https://kathsucurry.github.io/cuda/2025/10/14/reduction_sum_part1.html) - Introduction to parallel reduction in CUDA.
 - [Reduction (Sum) Series: Part 2](https://kathsucurry.github.io/cuda/2025/10/27/reduction_sum_part2.html) - Implementing and optimizing reduction kernels step by step.
 
