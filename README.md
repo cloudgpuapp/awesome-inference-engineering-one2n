@@ -1,10 +1,12 @@
 # Awesome Inference Engineering [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![Inference Engineering landscape](assets/inference-landscape.png)](assets/inference-landscape.png)
-
 This is a curated collection of inference fundamentals, open-source inference engines, research papers, benchmarks, and practical guides for engineers who want to understand what happens when a model runs, and what it takes to run it well in production.
 
 It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. Later sections cover multimodal inference, including image and video generation, and how to run and scale all of these workloads in production.
+
+<p align="center">
+  <a href="assets/inference-landscape.png"><img src="assets/inference-landscape.png" alt="Inference Engineering landscape" width="100%"></a>
+</p>
 
 <a id="contents"></a>
 
@@ -52,8 +54,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [7. Learning resources](#learning)
   - [7.1 Courses and books](#courses-and-books)
   - [7.2 Talks](#talks)
-- [8. Contributing](#contributing)
-- [9. License](#license)
+- [Contributing](#contributing)
+- [License](#license)
 
 <a id="fundamentals"></a>
 
@@ -101,6 +103,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [LLM Evaluation: A Beginner's Guide](https://www.evidentlyai.com/llm-guide/llm-evaluation) - Evaluation methods for LLM systems, from benchmarks to LLM-as-a-judge.
 - [PEFT](https://github.com/huggingface/peft) - Parameter-efficient fine-tuning methods such as LoRA, which produce small adapters that engines can serve together on one base model.
 - [LLM Model Pruning and Knowledge Distillation with NVIDIA NeMo Framework](https://developer.nvidia.com/blog/llm-model-pruning-and-knowledge-distillation-with-nvidia-nemo-framework/) - Producing a smaller student model through pruning and distillation.
+
+<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="hardware"></a>
 
@@ -171,6 +175,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [MLC LLM](https://github.com/mlc-ai/mlc-llm) - Compiler-based deployment of LLMs to phones, browsers and GPUs.
 - [MediaPipe LLM Inference](https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference) - Google AI Edge API for running LLMs on Android, iOS and the web.
 
+<p align="right"><a href="#contents">Back to top</a></p>
+
 <a id="software"></a>
 
 ## 3. Software
@@ -237,6 +243,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Demystifying Numeric Conversions in CuTeDSL](https://veitner.bearblog.dev/demystifying-numeric-conversions-in-cutedsl/) - Type-conversion primitives in CuTeDSL.
 - [Blackwell Pipelining with CuTeDSL](https://veitner.bearblog.dev/blackwell-pipelining-with-cutedsl/) - Overlapping work with CuTeDSL asynchronous pipelines on Blackwell.
 
+<p align="right"><a href="#contents">Back to top</a></p>
+
 <a id="inference-techniques"></a>
 
 ## 4. Inference techniques
@@ -268,7 +276,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 ### 4.3 Quantization
 
 - [A Visual Guide to Quantization](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization) - Illustrated introduction to LLM quantization.
-- [Post Training Quantization](https://liyuan24.github.io/writings/2026_01_06_post_training_quantization.html) - Detailed walkthrough of post-training weight quantization.
+- [Post Training Quantization](https://liyuan24.github.io/writings/2026_01_06_post_training_quantization.html) - Walkthrough of post-training weight quantization.
 - [Quantization-Aware Training for Large Language Models with PyTorch](https://pytorch.org/blog/quantization-aware-training/) - Recovering accuracy lost to quantization by simulating it during training.
 
 <a id="speculative-decoding"></a>
@@ -284,11 +292,10 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 ### 4.5 KV-cache reuse, routing and offload
 
-- [Prompt Caching](https://ngrok.com/blog/prompt-caching/) - Detailed explanation of how cached prompt tokens skip recomputation and why that makes them cheaper.
+- [Prompt Caching](https://ngrok.com/blog/prompt-caching/) - How cached prompt tokens skip recomputation and why that makes them cheaper.
 - [vLLM Automatic Prefix Caching](https://docs.vllm.ai/en/latest/design/prefix_caching/) - Design of vLLM's hash-based prefix cache.
 - [Fast and Expressive LLM Inference with RadixAttention and SGLang](https://www.lmsys.org/blog/2024-01-17-sglang/) - Radix-tree KV-cache reuse across requests in SGLang.
 - [Ray Serve: Reduce LLM Inference Latency by 60% with Custom Request Routing](https://www.anyscale.com/blog/ray-serve-faster-first-token-custom-routing) - Prefix-aware routing to cut TTFT in multi-turn chat.
-- [KV-Cache Wins You Can See](https://llm-d.ai/blog/kvcache-wins-you-can-see) - Prefix-, load- and SLO-aware routing in llm-d.
 - [How to Reduce KV Cache Bottlenecks with NVIDIA Dynamo](https://developer.nvidia.com/blog/how-to-reduce-kv-cache-bottlenecks-with-nvidia-dynamo/) - KV-cache offload and reuse in Dynamo.
 - [Inside vLLM's New KV Offloading Connector](https://vllm.ai/blog/2026-01-08-kv-offloading-connector) - Offloading KV-cache to CPU DRAM and tuning host-to-device throughput.
 - [LMCache](https://github.com/LMCache/LMCache) - KV-cache layer that stores and reuses KV cache across GPU, CPU, disk and remote tiers.
@@ -328,6 +335,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [llm-d Architecture](https://llm-d.ai/docs/architecture) - Component design and topology of llm-d.
 - [llm-d](https://github.com/llm-d/llm-d) - Kubernetes-native distributed LLM inference with KV-cache-aware scheduling.
 - [Mooncake](https://github.com/kvcache-ai/Mooncake) - KV-cache-centric disaggregated serving platform behind Moonshot AI's Kimi.
+
+<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="beyond-llms"></a>
 
@@ -374,6 +383,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [ComfyUI](https://github.com/Comfy-Org/ComfyUI) - Node-graph interface, API and backend for running diffusion pipelines.
 - [SGLang Diffusion](https://www.lmsys.org/blog/2025-11-07-sglang-diffusion/) - SGLang's serving stack applied to image and video generation.
 - [vLLM-Omni Diffusion Guide](https://github.com/vllm-project/vllm-omni/tree/main/docs/user_guide/diffusion) - Attention backends and acceleration options for diffusion models in vLLM-Omni.
+
+<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="production"></a>
 
@@ -465,7 +476,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Turbocharging LinkedIn's Recommendation Systems with SGLang](https://www.linkedin.com/blog/engineering/ai/turbocharging-linkedins-recommendation-systems-with-sglang) - Using an LLM serving engine for ranking workloads.
 - [FriendliAI Achieves 3x Faster Qwen3 235B Inference Compared to vLLM](https://friendli.ai/blog/Qwen3-235B-benchmark) - MoE-aware serving compared with a vLLM baseline (vendor-reported).
 - [Together AI Delivers Fastest Inference for the Top Open-Source Models](https://www.together.ai/blog/fastest-inference-for-the-top-open-source-models) - Speculative decoding and FP4 on Blackwell (vendor-reported).
-- [SSD KV Cache LLM Inference Benchmark Report](https://www.gmicloud.ai/en/blog/gmi-cloud-achieves-4x-llm-performance-boost-with-tensormesh) - GMI Cloud and Tensormesh results for SSD-backed KV caching and lower TTFT (vendor-reported).
+
+<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="learning"></a>
 
@@ -478,7 +490,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Inference Engineering](https://www.baseten.co/inference-engineering/book/) - Philip Kiely's book on building faster, cheaper and more reliable generative AI inference systems.
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - TPU/GPU architecture, communication and parallelism for training and inference.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Hugging Face's interactive guide to parallelism and communication for training LLMs on GPU clusters.
-- [ECE 5545: ML Hardware and Systems](https://abdelfattah-class.github.io/ece5545/) - Course on ML hardware, systems design, and how algorithms and hardware interact.
 
 <a id="talks"></a>
 
@@ -491,14 +502,16 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Inside the MAX Framework](https://www.youtube.com/watch?v=WK5dVQ8vhbU) - Modular meetup walkthrough of the MAX inference stack.
 - [Introduction to LLM Serving with SGLang](https://www.youtube.com/watch?v=Ahtaha9fEM0) - AI Engineer workshop by Philip Kiely and Yineng Zhang on serving LLMs with SGLang.
 
+<p align="right"><a href="#contents">Back to top</a></p>
+
 <a id="contributing"></a>
 
-## 8. Contributing
+## Contributing
 
 Read [the contribution guide](CONTRIBUTING.md) before submitting. Use the issue templates to propose a topic.
 
 <a id="license"></a>
 
-## 9. License
+## License
 
 This repository's original content is licensed under the [MIT License](LICENSE). Linked projects, documentation, papers, images and code retain their respective licenses.
