@@ -61,7 +61,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 <a id="what-is-inference"></a>
 
-### 1.1 What inference is
+### 1.1 Fundamentals of Inference
 
 - [The Difference Between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference) - How serving a trained model differs from training it.
 - [How LLM Inference Works](https://arpitbhayani.me/blogs/how-llm-inference-works) - Prompt-to-response walkthrough of tokenization, embedding and autoregressive generation.
