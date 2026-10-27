@@ -2,7 +2,9 @@
 
 [![Inference Engineering landscape](assets/inference-landscape.png)](assets/inference-landscape.png)
 
-A curated collection of fundamentals, open-source inference engines, research papers, benchmarks and practical guides for engineers who are learning AI inference or building and running inference systems in production. It starts with the basics of serving a model, then covers the hardware and software behind it and the techniques that make inference faster and cheaper. Later sections cover multimodal models and production deployment.
+This is a curated collection of inference fundamentals, open-source inference engines, research papers, benchmarks, and practical guides for engineers who want to understand what happens when a model runs, and what it takes to run it well in production.
+
+It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. It later covers multimodal inference, including image and video generation, and running all of these workloads in production and scaling them. 
 
 <a id="contents"></a>
 
@@ -88,7 +90,6 @@ A curated collection of fundamentals, open-source inference engines, research pa
 ### 1.4 Latency and throughput metrics
 
 - [LLM Inference Benchmarking: Fundamental Concepts](https://developer.nvidia.com/blog/llm-benchmarking-fundamental-concepts/) - Definitions of TTFT, inter-token latency, tokens per second and end-to-end latency.
-- [LLM Inference Latency](https://clickhouse.com/resources/engineering/llm-inference-latency) - What TTFT, time per output token, throughput and end-to-end latency mean, and how to measure them.
 - [NIM LLM Benchmarking Metrics](https://docs.nvidia.com/nim/benchmarking/llm/metrics) - How NVIDIA defines and measures TTFT, inter-token latency, throughput and request latency.
 
 <a id="model-strategy"></a>
