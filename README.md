@@ -194,6 +194,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 ### 3.2 Inference engines
 
 - [vLLM](https://github.com/vllm-project/vllm) - High-throughput, memory-efficient LLM serving engine with continuous batching and PagedAttention.
+- [Inside vLLM](https://www.aleksagordic.com/blog/vllm) - Walkthrough of vLLM internals, from paged attention, continuous batching, prefix caching and speculative decoding to multi-GPU and multi-node serving.
 - [SGLang](https://github.com/sgl-project/sglang) - High-performance serving framework for language and multimodal models.
 - [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) - NVIDIA library and runtime for optimized LLM inference on NVIDIA GPUs.
 - [LMDeploy](https://github.com/InternLM/lmdeploy) - Toolkit for compressing, deploying and serving LLMs.
