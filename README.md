@@ -4,14 +4,14 @@
 
 This is a curated collection of inference fundamentals, open-source inference engines, research papers, benchmarks, and practical guides for engineers who want to understand what happens when a model runs, and what it takes to run it well in production.
 
-It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. It later covers multimodal inference, including image and video generation, and running all of these workloads in production and scaling them. 
+It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. Later sections cover multimodal inference, including image and video generation, and how to run and scale all of these workloads in production.
 
 <a id="contents"></a>
 
 ## Table of contents
 
 - [1. Inference fundamentals](#fundamentals)
-  - [1.1 What inference is](#what-is-inference)
+  - [1.1 Inference basics and optimizations](#inference-basics)
   - [1.2 Transformers, attention and the KV cache](#transformers-and-kv-cache)
   - [1.3 Prefill, decode and serving modes](#prefill-and-decode)
   - [1.4 Latency and throughput metrics](#latency-metrics)
@@ -59,15 +59,15 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 ## 1. Inference fundamentals
 
-<a id="what-is-inference"></a>
+<a id="inference-basics"></a>
 
-### 1.1 Fundamentals of Inference
+### 1.1 Inference basics and optimizations
 
 - [The Difference Between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference) - How serving a trained model differs from training it.
 - [How LLM Inference Works](https://arpitbhayani.me/blogs/how-llm-inference-works) - Prompt-to-response walkthrough of tokenization, embedding and autoregressive generation.
-- [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - Prefill and decode, compute and memory limits, batching and KV-cache trade-offs.
-- [Top 5 AI Model Optimization Techniques for Faster, Smarter Inference](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Overview of model-level optimizations, such as quantization and pruning, for inference latency and cost.
 - [Open-Source LLMs vs Closed](https://hatchworks.com/blog/gen-ai/open-source-vs-closed-llms-guide/) - Trade-offs between open-weight and closed, API-only models.
+- [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - Prefill and decode, compute and memory limits, batching and KV-cache trade-offs.
+- [Top 5 AI Model Optimization Techniques for Faster, Smarter Inference](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Post-training quantization, quantization-aware training, quantization-aware distillation, speculative decoding and pruning with distillation.
 
 <a id="transformers-and-kv-cache"></a>
 
@@ -207,11 +207,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [GuideLLM](https://github.com/vllm-project/guidellm) - vLLM project's tool for benchmarking deployments against realistic traffic.
 - [genai-bench](https://github.com/sgl-project/genai-bench) - SGLang's token-level benchmark for LLM serving endpoints.
 - [AIPerf](https://github.com/ai-dynamo/aiperf) - Generative AI load testing, trace replay and SLO analysis.
-- [llm-inference-benchmark](https://github.com/winderai/llm-inference-benchmark) - Reproducible comparison of vLLM, SGLang, TensorRT-LLM, llama.cpp and Ollama on a single H100.
 - [MLPerf Inference](https://github.com/mlcommons/inference) - Reference implementations of the MLPerf Inference benchmarks.
 - [Vidur](https://github.com/microsoft/vidur) - Simulator that estimates LLM serving performance across configurations without running them.
-- [Host Overhead is Killing Your Inference Efficiency](https://modal.com/blog/host-overhead-inference-efficiency) - How CPU-side work starves the GPU and how to find it.
-- [PyTorch and CPU-GPU Synchronizations](https://tomasruizt.github.io/posts/08_cpu_gpu_synchronization/) - Spotting and removing hidden synchronization points.
 - [Nsight Systems User Guide](https://docs.nvidia.com/nsight-systems/UserGuide/index.html) - NVIDIA's system-wide timeline profiler for CPU, GPU and communication activity.
 - [ROCm Systems Profiler](https://rocm.docs.amd.com/projects/rocprofiler-systems/en/latest/) - AMD's system-wide timeline profiler for CPU and GPU activity.
 - [Nsight Compute Profiling Guide](https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html) - Profiling CUDA kernels and interpreting hardware metrics.
@@ -265,9 +262,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Efficient Request Queueing](https://huggingface.co/blog/tngtech/llm-performance-request-queueing) - How queueing in front of an LLM server affects latency and throughput under load.
 - [FlashAttention](https://arxiv.org/html/2205.14135v2) - IO-aware exact attention that tiles computation to avoid materializing the attention matrix.
 - [Paged Attention from First Principles](https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/) - PagedAttention explained from virtual-memory basics.
-- [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180) - The vLLM paper introducing paged KV-cache memory management.
-- [FlashInfer](https://github.com/flashinfer-ai/flashinfer) - Kernel library for LLM serving, focused on attention and sampling.
-- [xFormers](https://github.com/facebookresearch/xformers) - Composable, optimized transformer building blocks, including memory-efficient attention.
 
 <a id="quantization"></a>
 
@@ -276,7 +270,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [A Visual Guide to Quantization](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization) - Illustrated introduction to LLM quantization.
 - [Post Training Quantization](https://liyuan24.github.io/writings/2026_01_06_post_training_quantization.html) - Detailed walkthrough of post-training weight quantization.
 - [Quantization-Aware Training for Large Language Models with PyTorch](https://pytorch.org/blog/quantization-aware-training/) - Recovering accuracy lost to quantization by simulating it during training.
-- [INT vs FP](https://github.com/ChenMnZ/INT_vs_FP) - Framework comparing low-bit integer and floating-point formats.
 
 <a id="speculative-decoding"></a>
 
@@ -317,12 +310,10 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 ### 4.7 Parallelism and communication
 
 - [How Multi-Node Inference Works for Massive LLMs like DeepSeek-R1](https://www.baseten.co/blog/how-multi-node-inference-works-llms-deepseek-r1/) - Why DeepSeek-R1 needs 16 H100s across two nodes, and how multi-node serving connects them.
-- [Shift Parallelism](https://arxiv.org/abs/2509.16495) - Switching between tensor and data parallelism to balance latency and throughput.
+- [Shift Parallelism](https://arxiv.org/html/2509.16495v2) - Switching between tensor and data parallelism to balance latency and throughput.
 - [vLLM Large Scale Serving: DeepSeek @ 2.2k tok/s/H200 with Wide-EP](https://vllm.ai/blog/2025-12-17-large-scale-serving) - Wide expert parallelism, dual-batch overlap and disaggregated serving for DeepSeek on H200 clusters.
-- [Streamlined Multi-Node Serving with Ray symmetric-run](https://vllm.ai/blog/2025-11-22-ray-symmetric-run) - Launching multi-node vLLM on HPC-style clusters with one command.
 - [NCCL](https://github.com/NVIDIA/nccl) - NVIDIA collective communication library for multi-GPU and multi-node transfers.
 - [RCCL](https://github.com/ROCm/rocm-systems/tree/develop/projects/rccl) - AMD's collective communication library for ROCm GPUs.
-- [rocSHMEM](https://github.com/ROCm/rocm-systems/tree/develop/projects/rocshmem) - AMD's GPU-initiated OpenSHMEM communication library.
 - [DeepEP](https://github.com/deepseek-ai/DeepEP) - Expert-parallel communication library for MoE dispatch and combine.
 - [UCCL](https://github.com/uccl-project/uccl) - GPU communication library for collectives, P2P KV transfer and expert parallelism.
 
@@ -330,7 +321,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 ### 4.8 Disaggregation
 
-- [Disaggregated Inference: 18 Months Later](https://haoailab.com/blogs/distserve-retro/) - DistServe authors' retrospective on prefill/decode disaggregation adoption.
 - [Disaggregated Inference at Scale with PyTorch and vLLM](https://pytorch.org/blog/disaggregated-inference-at-scale-with-pytorch-vllm/) - Running separate prefill and decode pools with vLLM.
 - [Disaggregated Serving in TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/blogs/tech_blog/blog05_Disaggregated_Serving_in_TensorRT-LLM.md) - TensorRT-LLM's disaggregated serving design.
 - [SGLang PD Disaggregation](https://docs.sglang.io/docs/advanced_features/pd_disaggregation) - Configuring prefill/decode disaggregation in SGLang.
@@ -488,7 +478,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Inference Engineering](https://www.baseten.co/inference-engineering/book/) - Philip Kiely's book on building faster, cheaper and more reliable generative AI inference systems.
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - TPU/GPU architecture, communication and parallelism for training and inference.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Hugging Face's interactive guide to parallelism and communication for training LLMs on GPU clusters.
-- [MIT 6.5940: TinyML and Efficient Deep Learning Computing](https://hanlab.mit.edu/courses/2024-fall-65940) - Efficient inference techniques from edge devices to the cloud.
 - [ECE 5545: ML Hardware and Systems](https://abdelfattah-class.github.io/ece5545/) - Course on ML hardware, systems design, and how algorithms and hardware interact.
 
 <a id="talks"></a>
