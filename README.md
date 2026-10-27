@@ -4,14 +4,14 @@
 
 This is a curated collection of inference fundamentals, open-source inference engines, research papers, benchmarks, and practical guides for engineers who want to understand what happens when a model runs, and what it takes to run it well in production.
 
-It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. It later covers multimodal inference, including image and video generation, and running all of these workloads in production and scaling them. 
+It starts with the basics of model serving, then goes deeper into the hardware and systems underneath and the optimisations that make inference faster and cheaper. It later covers multimodal inference, including image and video generation, and running all of these workloads in production and scaling them.
 
 <a id="contents"></a>
 
 ## Table of contents
 
 - [1. Inference fundamentals](#fundamentals)
-  - [1.1 What inference is](#what-is-inference)
+  - [1.1 Inference basics and optimizations](#inference-basics)
   - [1.2 Transformers, attention and the KV cache](#transformers-and-kv-cache)
   - [1.3 Prefill, decode and serving modes](#prefill-and-decode)
   - [1.4 Latency and throughput metrics](#latency-metrics)
@@ -59,15 +59,15 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 ## 1. Inference fundamentals
 
-<a id="what-is-inference"></a>
+<a id="inference-basics"></a>
 
-### 1.1 Fundamentals of Inference
+### 1.1 Inference basics and optimizations
 
 - [The Difference Between AI Training and Inference](https://nebius.com/blog/posts/difference-between-ai-training-and-inference) - How serving a trained model differs from training it.
 - [How LLM Inference Works](https://arpitbhayani.me/blogs/how-llm-inference-works) - Prompt-to-response walkthrough of tokenization, embedding and autoregressive generation.
-- [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - Prefill and decode, compute and memory limits, batching and KV-cache trade-offs.
-- [Top 5 AI Model Optimization Techniques for Faster, Smarter Inference](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Overview of model-level optimizations, such as quantization and pruning, for inference latency and cost.
 - [Open-Source LLMs vs Closed](https://hatchworks.com/blog/gen-ai/open-source-vs-closed-llms-guide/) - Trade-offs between open-weight and closed, API-only models.
+- [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - Prefill and decode, compute and memory limits, batching and KV-cache trade-offs.
+- [Top 5 AI Model Optimization Techniques for Faster, Smarter Inference](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Post-training quantization, quantization-aware training, quantization-aware distillation, speculative decoding and pruning with distillation.
 
 <a id="transformers-and-kv-cache"></a>
 
