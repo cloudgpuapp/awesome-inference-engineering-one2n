@@ -265,9 +265,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Efficient Request Queueing](https://huggingface.co/blog/tngtech/llm-performance-request-queueing) - How queueing in front of an LLM server affects latency and throughput under load.
 - [FlashAttention](https://arxiv.org/html/2205.14135v2) - IO-aware exact attention that tiles computation to avoid materializing the attention matrix.
 - [Paged Attention from First Principles](https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/) - PagedAttention explained from virtual-memory basics.
-- [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180) - The vLLM paper introducing paged KV-cache memory management.
-- [FlashInfer](https://github.com/flashinfer-ai/flashinfer) - Kernel library for LLM serving, focused on attention and sampling.
-- [xFormers](https://github.com/facebookresearch/xformers) - Composable, optimized transformer building blocks, including memory-efficient attention.
 
 <a id="quantization"></a>
 
