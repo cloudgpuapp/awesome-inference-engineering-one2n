@@ -2,7 +2,7 @@
 
 [![Inference Engineering landscape](assets/inference-landscape.png)](assets/inference-landscape.png)
 
-A curated collection of fundamentals, open-source inference engines, research papers, benchmarks and practical guides for engineers who are learning AI inference or building and running inference systems in production. It starts with the basics of serving a model, then covers the hardware and software behind it, the techniques that improve performance and reduce cost, multimodal models and production deployment.
+A curated collection of fundamentals, open-source inference engines, research papers, benchmarks and practical guides for engineers who are learning AI inference or building and running inference systems in production. It starts with the basics of serving a model, then covers the hardware and software behind it and the techniques that make inference faster and cheaper. Later sections cover multimodal models and production deployment.
 
 <a id="contents"></a>
 
