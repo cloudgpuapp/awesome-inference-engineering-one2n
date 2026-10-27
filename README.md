@@ -50,7 +50,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
   - [6.4 Cloud platforms](#cloud-platforms)
   - [6.5 Observability, security and debugging](#observability-and-reliability)
   - [6.6 Cost and efficiency](#cost-and-efficiency)
-- [7. Learning resources](#case-studies)
+- [7. Learning resources](#learning)
   - [7.1 Courses and books](#courses-and-books)
   - [7.2 Talks](#talks)
 - [Contributing](#contributing)
@@ -466,9 +466,14 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Energy Use of AI Inference, Efficiency Pathways, and Test-Time Scaling](https://arxiv.org/abs/2509.20241) - Per-query energy estimates and efficiency pathways at scale.
 - [GPU Inefficiency in AI Workloads](https://www.anyscale.com/blog/gpu-in-efficiency-in-ai-workloads) - Why production GPUs sit underutilized.
 
+<p align="right"><a href="#contents">Back to top</a></p>
+
+<a id="learning"></a>
+
 ## 7. Learning resources
 
 <a id="courses-and-books"></a>
+
 ### 7.1 Courses and books
 
 - [Inference Engineering](https://www.baseten.co/inference-engineering/book/) - Philip Kiely's book on building faster, cheaper and more reliable generative AI inference systems.
