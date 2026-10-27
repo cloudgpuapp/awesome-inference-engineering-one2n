@@ -285,7 +285,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [EAGLE](https://github.com/SafeAILab/EAGLE) - Official implementation of the EAGLE-1, EAGLE-2 and EAGLE-3 speculative decoding methods.
 - [Medusa](https://github.com/FasterDecoding/Medusa) - Multiple decoding heads for candidate token generation.
 - [Speculators: Production-Ready Speculative Decoding](https://developers.redhat.com/articles/2025/11/19/speculators-standardized-production-ready-speculative-decoding) - Why the speculators library standardizes draft-model formats.
-- [Spec-Bench](https://github.com/hemingkx/Spec-Bench) - Unified benchmark for comparing speculative decoding methods.
 
 <a id="kv-cache"></a>
 
