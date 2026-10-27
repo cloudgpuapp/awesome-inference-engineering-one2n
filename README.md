@@ -273,7 +273,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [A Visual Guide to Quantization](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization) - Illustrated introduction to LLM quantization.
 - [Post Training Quantization](https://liyuan24.github.io/writings/2026_01_06_post_training_quantization.html) - Detailed walkthrough of post-training weight quantization.
 - [Quantization-Aware Training for Large Language Models with PyTorch](https://pytorch.org/blog/quantization-aware-training/) - Recovering accuracy lost to quantization by simulating it during training.
-- [INT vs FP](https://github.com/ChenMnZ/INT_vs_FP) - Framework comparing low-bit integer and floating-point formats.
 
 <a id="speculative-decoding"></a>
 
@@ -314,9 +313,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 ### 4.7 Parallelism and communication
 
 - [How Multi-Node Inference Works for Massive LLMs like DeepSeek-R1](https://www.baseten.co/blog/how-multi-node-inference-works-llms-deepseek-r1/) - Why DeepSeek-R1 needs 16 H100s across two nodes, and how multi-node serving connects them.
-- [Shift Parallelism](https://arxiv.org/abs/2509.16495) - Switching between tensor and data parallelism to balance latency and throughput.
+- [Shift Parallelism](https://arxiv.org/html/2509.16495v2) - Switching between tensor and data parallelism to balance latency and throughput.
 - [vLLM Large Scale Serving: DeepSeek @ 2.2k tok/s/H200 with Wide-EP](https://vllm.ai/blog/2025-12-17-large-scale-serving) - Wide expert parallelism, dual-batch overlap and disaggregated serving for DeepSeek on H200 clusters.
-- [Streamlined Multi-Node Serving with Ray symmetric-run](https://vllm.ai/blog/2025-11-22-ray-symmetric-run) - Launching multi-node vLLM on HPC-style clusters with one command.
 - [NCCL](https://github.com/NVIDIA/nccl) - NVIDIA collective communication library for multi-GPU and multi-node transfers.
 - [RCCL](https://github.com/ROCm/rocm-systems/tree/develop/projects/rccl) - AMD's collective communication library for ROCm GPUs.
 - [rocSHMEM](https://github.com/ROCm/rocm-systems/tree/develop/projects/rocshmem) - AMD's GPU-initiated OpenSHMEM communication library.
