@@ -102,8 +102,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [PEFT](https://github.com/huggingface/peft) - Parameter-efficient fine-tuning methods such as LoRA, which produce small adapters that engines can serve together on one base model.
 - [LLM Model Pruning and Knowledge Distillation with NVIDIA NeMo Framework](https://developer.nvidia.com/blog/llm-model-pruning-and-knowledge-distillation-with-nvidia-nemo-framework/) - Producing a smaller student model through pruning and distillation.
 
-<p align="right"><a href="#contents">Back to top</a></p>
-
 <a id="hardware"></a>
 
 ## 2. Hardware
@@ -173,8 +171,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [MLC LLM](https://github.com/mlc-ai/mlc-llm) - Compiler-based deployment of LLMs to phones, browsers and GPUs.
 - [MediaPipe LLM Inference](https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference) - Google AI Edge API for running LLMs on Android, iOS and the web.
 
-<p align="right"><a href="#contents">Back to top</a></p>
-
 <a id="software"></a>
 
 ## 3. Software
@@ -240,8 +236,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Categorical Foundations for CuTe Layouts](https://research.colfax-intl.com/categorical-foundations-for-cute-layouts/) - The mathematics behind CuTe's layout algebra.
 - [Demystifying Numeric Conversions in CuTeDSL](https://veitner.bearblog.dev/demystifying-numeric-conversions-in-cutedsl/) - Type-conversion primitives in CuTeDSL.
 - [Blackwell Pipelining with CuTeDSL](https://veitner.bearblog.dev/blackwell-pipelining-with-cutedsl/) - Overlapping work with CuTeDSL asynchronous pipelines on Blackwell.
-
-<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="inference-techniques"></a>
 
@@ -334,8 +328,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [llm-d](https://github.com/llm-d/llm-d) - Kubernetes-native distributed LLM inference with KV-cache-aware scheduling.
 - [Mooncake](https://github.com/kvcache-ai/Mooncake) - KV-cache-centric disaggregated serving platform behind Moonshot AI's Kimi.
 
-<p align="right"><a href="#contents">Back to top</a></p>
-
 <a id="beyond-llms"></a>
 
 ## 5. Omni-model inference
@@ -381,8 +373,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [ComfyUI](https://github.com/Comfy-Org/ComfyUI) - Node-graph interface, API and backend for running diffusion pipelines.
 - [SGLang Diffusion](https://www.lmsys.org/blog/2025-11-07-sglang-diffusion/) - SGLang's serving stack applied to image and video generation.
 - [vLLM-Omni Diffusion Guide](https://github.com/vllm-project/vllm-omni/tree/main/docs/user_guide/diffusion) - Attention backends and acceleration options for diffusion models in vLLM-Omni.
-
-<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="production"></a>
 
@@ -466,8 +456,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Energy Use of AI Inference, Efficiency Pathways, and Test-Time Scaling](https://arxiv.org/abs/2509.20241) - Per-query energy estimates and efficiency pathways at scale.
 - [GPU Inefficiency in AI Workloads](https://www.anyscale.com/blog/gpu-in-efficiency-in-ai-workloads) - Why production GPUs sit underutilized.
 
-<p align="right"><a href="#contents">Back to top</a></p>
-
 <a id="learning"></a>
 
 ## 7. Learning resources
@@ -490,8 +478,6 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Inference OSS Ecosystem featuring vLLM](https://www.nvidia.com/en-us/on-demand/session/other25-dynamoday06/) - Disaggregation and wide-EP for MoE on GB200 racks.
 - [Inside the MAX Framework](https://www.youtube.com/watch?v=WK5dVQ8vhbU) - Modular meetup walkthrough of the MAX inference stack.
 - [Introduction to LLM Serving with SGLang](https://www.youtube.com/watch?v=Ahtaha9fEM0) - AI Engineer workshop by Philip Kiely and Yineng Zhang on serving LLMs with SGLang.
-
-<p align="right"><a href="#contents">Back to top</a></p>
 
 <a id="contributing"></a>
 
