@@ -188,7 +188,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 #### Google TPU
 
-- [Ironwood: The first Google TPU for the age of inference](https://blog.google/products/google-cloud/ironwood-tpu-age-of-inference/) - Google's announcement of its seventh-generation, inference-focused TPU.
+- [Ironwood: The first Google TPU for the age of inference](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/) - Google's announcement of its seventh-generation, inference-focused TPU.
 - [TPU Architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm) - Official reference for TensorCores, MXUs, slices, pods and multislice topologies.
 - [How to Think About TPUs](https://jax-ml.github.io/scaling-book/tpus/) - TPU compute, memory and interconnect explained for model workloads.
 
@@ -411,7 +411,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) - Whisper transcription reimplemented on CTranslate2 for faster inference.
 - [whisper.cpp](https://github.com/ggml-org/whisper.cpp) - Port of Whisper to C/C++ for CPU, GPU and on-device transcription.
 - [Piper](https://github.com/OHF-Voice/piper1-gpl) - Fast, local neural text-to-speech engine.
-- [What Is Speech-to-Speech?](https://deepgram.com/learn/what-is-speech-to-speech) - Cascaded versus end-to-end speech-to-speech pipelines and where each fits.
+- [What Is Speech-to-Speech?](https://deepgram.com/blog/what-is-speech-to-speech) - Cascaded versus end-to-end speech-to-speech pipelines and where each fits.
 - [Moshi](https://github.com/kyutai-labs/moshi) - Speech-text foundation model and full-duplex dialogue framework with a streaming audio codec.
 
 <a id="vision-and-video-analytics"></a>
@@ -421,7 +421,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) - Training, export and inference for YOLO detection, segmentation, pose and tracking models.
 - [Ultralytics Export Formats](https://docs.ultralytics.com/modes/export/) - Exporting YOLO models to ONNX, TensorRT, OpenVINO, Core ML and other deployment formats.
 - [Triton Inference Server with Ultralytics YOLO](https://docs.ultralytics.com/guides/triton-inference-server/) - Exporting a YOLO model to ONNX and serving it from a Triton model repository.
-- [NVIDIA DeepStream SDK](https://developer.nvidia.com/deepstream-sdk) - GStreamer-based toolkit for multi-stream video analytics pipelines on NVIDIA GPUs and Jetson.
+- [NVIDIA DeepStream SDK](https://github.com/NVIDIA/DeepStream) - GStreamer-based toolkit for multi-stream video analytics pipelines on NVIDIA GPUs and Jetson.
 - [DeepStream-Yolo](https://github.com/marcoslucianops/DeepStream-Yolo) - Community implementation for running YOLO models inside DeepStream pipelines.
 - [Savant](https://github.com/insight-platform/Savant) - Python framework for video analytics pipelines, built on DeepStream for NVIDIA GPUs and Jetson.
 - [DL Streamer](https://github.com/open-edge-platform/dlstreamer) - Intel's GStreamer-based pipeline framework for video analytics on Intel CPUs, GPUs and NPUs.
@@ -522,10 +522,10 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [Cog](https://github.com/replicate/cog) - Replicate's open-source tool for packaging models as production-ready containers.
 - [E2E Networks TIR Model Endpoints](https://docs.e2enetworks.com/docs/tir/Inference/ModelEndpoints/QuickStartGuide/) - Creating managed endpoints with vLLM, SGLang or Triton runtimes on E2E's TIR platform.
 - [Modal: LLM Inference with vLLM](https://modal.com/docs/examples/llm_inference) - Modal's example of serving an OpenAI-compatible vLLM server on serverless GPUs.
-- [Baseten Model Deployment](https://docs.baseten.co/deploy/overview) - Deploying models on Baseten with Truss, from a config file to an autoscaling API.
+- [Baseten Model Deployment](https://docs.baseten.co/deployment/concepts) - Deploying models on Baseten with Truss, from a config file to an autoscaling API.
 - [Truss](https://github.com/basetenlabs/truss) - Baseten's open-source framework for packaging models into deployable containers.
 - [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index) - Deploying Hub models on managed, autoscaling infrastructure across cloud providers.
-- [Together AI Dedicated Inference](https://docs.together.ai/docs/dedicated-inference) - Running models on dedicated, single-tenant GPU endpoints on Together AI.
+- [Together AI Dedicated Inference](https://docs.together.ai/docs/dedicated-endpoints/overview) - Running models on dedicated, single-tenant GPU endpoints on Together AI.
 
 <a id="observability-and-reliability"></a>
 
