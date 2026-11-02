@@ -54,7 +54,8 @@ It starts with the basics of model serving, then goes deeper into the hardware a
   - [6.6 Cost and efficiency](#cost-and-efficiency)
 - [7. Learning resources](#learning)
   - [7.1 Courses and books](#courses-and-books)
-  - [7.2 Talks](#talks)
+  - [7.2 GitHub repositories](#github-repositories)
+  - [7.3 Talks](#talks)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -559,16 +560,21 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 ### 7.1 Courses and books
 
 - [Inference Engineering](https://www.baseten.co/inference-engineering/book/) - Philip Kiely's book on building faster, cheaper and more reliable generative AI inference systems.
-- [100 Days of LLM Inference](https://github.com/elizabetht/100-days-of-inference) - Day-by-day runnable experiments that follow the Inference Engineering book, from KV cache and kernels to quantization, speculative decoding and disaggregated serving.
 - [How To Scale Your Model](https://jax-ml.github.io/scaling-book/) - TPU/GPU architecture, communication and parallelism for training and inference.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Hugging Face's interactive guide to parallelism and communication for training LLMs on GPU clusters.
 - [Hands-On LLM Serving and Optimization](https://www.oreilly.com/library/view/hands-on-llm-serving/9798341621480/) - Chi Wang and Peiheng Hu's O'Reilly book on hosting and optimizing LLMs at scale.
+
+<a id="github-repositories"></a>
+
+### 7.2 GitHub repositories
+
+- [100 Days of LLM Inference](https://github.com/elizabetht/100-days-of-inference) - Day-by-day runnable experiments that follow the Inference Engineering book, from KV cache and kernels to quantization, speculative decoding and disaggregated serving.
 - [LLM Inference Engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering) - Step-by-step blog series from autoregressive generation, prefill and decode to KV cache, PagedAttention, continuous batching, vLLM, SGLang and GPUs.
 - [AI Inference Resources](https://github.com/aerlabsAI/ai-inference-resources) - AER Labs' tiered reading guide covering LLM serving, GPU kernels, attention, quantization, distributed inference and production deployment.
 
 <a id="talks"></a>
 
-### 7.2 Talks
+### 7.3 Talks
 
 - [The Rise of vLLM](https://www.youtube.com/watch?v=WLl8D1nyaW8) - How vLLM grew from a research project into a widely used engine.
 - [SGLang: An Efficient Open-Source Framework for Large-Scale LLM Serving](https://www.youtube.com/watch?v=w9-AYqIhHRo) - Ray Summit 2025 talk on SGLang's architecture and production use.
