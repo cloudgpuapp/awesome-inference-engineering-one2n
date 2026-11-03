@@ -236,9 +236,27 @@ color = "#34d399"
     { name = "llm-d", logo = "gh", link = "https://github.com/llm-d/llm-d" },
   ]
 
+  [[section.card]]
+  title = "Long context"
+  tiles = [
+    { name = "RoPE", badge = "RoPE", link = "https://blog.eleuther.ai/rotary-embeddings/" },
+    { name = "YaRN", badge = "YaRN", link = "https://arxiv.org/abs/2309.00071" },
+    { name = "Ring Attention", badge = "RING", link = "https://arxiv.org/abs/2310.01889" },
+    { name = "kvpress", badge = "kvp", sub = "NVIDIA", link = "https://github.com/NVIDIA/kvpress" },
+  ]
+
+  [[section.card]]
+  title = "Structured output"
+  tiles = [
+    { name = "XGrammar", badge = "XG", sub = "MLC", link = "https://github.com/mlc-ai/xgrammar" },
+    { name = "llguidance", logo = "gh", link = "https://github.com/guidance-ai/llguidance" },
+    { name = "Outlines", logo = "gh", link = "https://github.com/dottxt-ai/outlines" },
+    { name = "Tool calling", badge = "TOOL", sub = "vLLM", link = "https://docs.vllm.ai/en/latest/features/tool_calling/" },
+  ]
+
 [[section]]
 number = 5
-title = "Omni-modal inference"
+title = "Multimodal inference"
 color = "#22d3ee"
 
   [[section.card]]
@@ -340,7 +358,7 @@ color = "#60a5fa"
     { name = "Lambda", logo = "lambda.png", link = "https://docs.lambda.ai/education/large-language-models/serving-llama-3-1-docker/" },
     { name = "CoreWeave", logo = "gh:coreweave", link = "https://docs.coreweave.com/products/inference" },
     { name = "Vast.ai", logo = "gh:vast-ai", link = "https://docs.vast.ai/vllm-llm-inference-and-serving" },
-    { name = "E2E Networks", badge = "E2E", link = "https://docs.e2enetworks.com/docs/myaccount/gpu/guides/serve-llm-inference" },
+    { name = "E2E Networks", badge = "E2E", link = "https://docs.e2enetworks.com/docs/myaccount/gpu/guides/serve-llm-inference/" },
   ]
 
   [[section.card]]
@@ -362,4 +380,30 @@ color = "#60a5fa"
     { name = "OTel GenAI conventions", logo = "gh:open-telemetry", link = "https://opentelemetry.io/docs/specs/semconv/gen-ai/" },
     { name = "OpenLLMetry", logo = "gh:traceloop", link = "https://github.com/traceloop/openllmetry" },
     { name = "Helicone", logo = "gh", link = "https://github.com/Helicone/helicone" },
+  ]
+
+  [[section.card]]
+  title = "Batch & RL rollouts"
+  tiles = [
+    { name = "vLLM offline inference", badge = "OFF", sub = "vLLM", link = "https://docs.vllm.ai/en/latest/serving/offline_inference/" },
+    { name = "Ray Data LLM", logo = "gh:ray-project", link = "https://docs.ray.io/en/latest/data/working-with-llms.html" },
+    { name = "verl", badge = "verl", link = "https://github.com/verl-project/verl" },
+    { name = "slime", badge = "slime", sub = "THUDM", link = "https://github.com/THUDM/slime" },
+  ]
+
+  [[section.card]]
+  title = "Serving reliability"
+  tiles = [
+    { name = "Ray Serve fault tolerance", badge = "FT", sub = "Ray", link = "https://docs.ray.io/en/latest/serve/production-guide/fault-tolerance.html" },
+    { name = "Pod lifecycle", logo = "gh:kubernetes", link = "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/" },
+    { name = "Fair scheduling (VTC)", badge = "VTC", link = "https://arxiv.org/abs/2401.00588" },
+    { name = "Llumnix", badge = "LX", link = "https://arxiv.org/abs/2406.03243" },
+  ]
+
+  [[section.card]]
+  title = "Cost & efficiency"
+  tiles = [
+    { name = "Cost per token", badge = "TCO", sub = "NVIDIA", link = "https://developer.nvidia.com/blog/llm-inference-benchmarking-how-much-does-your-llm-inference-cost/" },
+    { name = "Zeus", logo = "gh", link = "https://github.com/ml-energy/zeus" },
+    { name = "ML.ENERGY Leaderboard", badge = "LB", sub = "ML.ENERGY", link = "https://ml.energy/leaderboard/" },
   ]
