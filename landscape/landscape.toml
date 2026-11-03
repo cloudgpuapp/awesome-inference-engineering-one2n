@@ -116,7 +116,7 @@ color = "#a78bfa"
     { name = "Transformers", logo = "gh", link = "https://github.com/huggingface/transformers" },
     { name = "safetensors", logo = "gh", link = "https://github.com/safetensors/safetensors" },
     { name = "GGUF", badge = "GGUF", sub = "ggml", link = "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md" },
-    { name = "ONNX Runtime", logo = "gh:onnx", link = "https://github.com/microsoft/onnxruntime" },
+    { name = "ONNX Runtime", logo = "onnxruntime.png", link = "https://github.com/microsoft/onnxruntime" },
     { name = "TensorRT", badge = "TRT", sub = "NVIDIA", link = "https://github.com/NVIDIA/TensorRT" },
     { name = "OpenVINO", logo = "gh", link = "https://github.com/openvinotoolkit/openvino" },
   ]
@@ -154,7 +154,7 @@ color = "#a78bfa"
   [[section.card]]
   title = "Inference engines: mobile & edge"
   tiles = [
-    { name = "ExecuTorch", badge = "ET", sub = "PyTorch", link = "https://github.com/pytorch/executorch" },
+    { name = "ExecuTorch", logo = "executorch.png", link = "https://github.com/pytorch/executorch" },
     { name = "MLC LLM", logo = "gh", link = "https://github.com/mlc-ai/mlc-llm" },
     { name = "LiteRT-LM", logo = "gh", link = "https://github.com/google-ai-edge/LiteRT-LM" },
     { name = "MediaPipe LLM", badge = "MP", sub = "Google", link = "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference" },
@@ -165,7 +165,7 @@ color = "#a78bfa"
   tiles = [
     { name = "AIPerf", badge = "AIPerf", sub = "NVIDIA", link = "https://github.com/ai-dynamo/aiperf" },
     { name = "GuideLLM", badge = "GLLM", sub = "vLLM", link = "https://github.com/vllm-project/guidellm" },
-    { name = "genai-bench", badge = "GB", sub = "SGLang", link = "https://github.com/sgl-project/genai-bench" },
+    { name = "genai-bench", logo = "genai-bench.png", link = "https://github.com/sgl-project/genai-bench" },
     { name = "MLPerf Inference", logo = "gh", link = "https://github.com/mlcommons/inference" },
     { name = "Vidur", logo = "gh", link = "https://github.com/microsoft/vidur" },
   ]
@@ -186,7 +186,7 @@ color = "#a78bfa"
     { name = "FlashInfer", logo = "gh", link = "https://github.com/flashinfer-ai/flashinfer" },
     { name = "CUTLASS", badge = "CUTL", sub = "NVIDIA", link = "https://github.com/NVIDIA/cutlass" },
     { name = "cuDNN", badge = "cuDNN", sub = "NVIDIA", link = "https://github.com/NVIDIA/cudnn-frontend" },
-    { name = "AITER", badge = "AITER", sub = "AMD", link = "https://github.com/ROCm/aiter" },
+    { name = "AITER", logo = "aiter.png", link = "https://github.com/ROCm/aiter" },
     { name = "Composable Kernel", badge = "CK", sub = "AMD", link = "https://github.com/ROCm/rocm-libraries/tree/develop/projects/composablekernel" },
     { name = "Triton", logo = "gh", link = "https://github.com/triton-lang/triton" },
     { name = "Apache TVM", logo = "gh", link = "https://github.com/apache/tvm" },
@@ -200,7 +200,7 @@ color = "#34d399"
   [[section.card]]
   title = "Quantization & compression"
   tiles = [
-    { name = "LLM Compressor", logo = "gh", link = "https://github.com/vllm-project/llm-compressor" },
+    { name = "LLM Compressor", logo = "llm-compressor.png", link = "https://github.com/vllm-project/llm-compressor" },
     { name = "Model Optimizer", badge = "MO", sub = "NVIDIA", link = "https://github.com/NVIDIA/Model-Optimizer" },
     { name = "torchao", badge = "ao", sub = "PyTorch", link = "https://github.com/pytorch/ao" },
     { name = "bitsandbytes", logo = "gh", link = "https://github.com/bitsandbytes-foundation/bitsandbytes" },
@@ -246,7 +246,7 @@ color = "#22d3ee"
   tiles = [
     { name = "Omni-models", badge = "OMNI", link = "https://www.nvidia.com/en-us/glossary/omni-model/" },
     { name = "Qwen3-Omni", logo = "gh", link = "https://github.com/QwenLM/Qwen3-Omni" },
-    { name = "vLLM-Omni", badge = "Omni", sub = "vLLM", link = "https://github.com/vllm-project/vllm-omni" },
+    { name = "vLLM-Omni", logo = "vllm-omni.png", link = "https://github.com/vllm-project/vllm-omni" },
     { name = "Vision-language models", badge = "VLM", link = "#vision-language-models" },
   ]
 
@@ -327,7 +327,7 @@ color = "#60a5fa"
   tiles = [
     { name = "Gateway API Inference Ext.", logo = "gh:kubernetes", link = "https://github.com/kubernetes-sigs/gateway-api-inference-extension" },
     { name = "llm-d Router", badge = "LLMD-R", sub = "llm-d", link = "https://github.com/llm-d/llm-d-router" },
-    { name = "vLLM Semantic Router", badge = "VSR", sub = "vLLM", link = "https://github.com/vllm-project/semantic-router" },
+    { name = "vLLM Semantic Router", logo = "vllm-semantic-router.png", link = "https://github.com/vllm-project/semantic-router" },
     { name = "KEDA", logo = "gh:kedacore", link = "https://github.com/kedacore/keda" },
   ]
 
@@ -337,7 +337,7 @@ color = "#60a5fa"
     { name = "AWS (EKS)", logo = "gh:aws", link = "https://docs.aws.amazon.com/eks/latest/userguide/ml-inference-load-serve-model.html" },
     { name = "Google Cloud (GKE)", logo = "gh:GoogleCloudPlatform", link = "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/deploy-gke-inference-gateway" },
     { name = "Azure (AKS)", logo = "gh:Azure", link = "https://learn.microsoft.com/en-us/azure/aks/ai-toolchain-operator" },
-    { name = "Lambda", badge = "L", link = "https://docs.lambda.ai/education/large-language-models/serving-llama-3-1-docker/" },
+    { name = "Lambda", logo = "lambda.png", link = "https://docs.lambda.ai/education/large-language-models/serving-llama-3-1-docker/" },
     { name = "CoreWeave", logo = "gh:coreweave", link = "https://docs.coreweave.com/products/inference" },
     { name = "Vast.ai", logo = "gh:vast-ai", link = "https://docs.vast.ai/vllm-llm-inference-and-serving" },
     { name = "E2E Networks", badge = "E2E", link = "https://docs.e2enetworks.com/docs/myaccount/gpu/guides/serve-llm-inference" },

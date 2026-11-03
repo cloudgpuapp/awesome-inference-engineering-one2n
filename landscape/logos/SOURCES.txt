@@ -1,4 +1,7 @@
 # logo file<TAB>source. Logos are trademarks of their respective owners.
+aiter.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+executorch.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+genai-bench.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
 gh-Arize-ai.png	https://github.com/Arize-ai.png?size=200
 gh-Azure.png	https://github.com/Azure.png?size=200
 gh-BerriAI.png	https://github.com/BerriAI.png?size=200
@@ -55,7 +58,6 @@ gh-mlcommons.png	https://github.com/mlcommons.png?size=200
 gh-modal-labs.png	https://github.com/modal-labs.png?size=200
 gh-mozilla-ai.png	https://github.com/mozilla-ai.png?size=200
 gh-ollama.png	https://github.com/ollama.png?size=200
-gh-onnx.png	https://github.com/onnx.png?size=200
 gh-open-telemetry.png	https://github.com/open-telemetry.png?size=200
 gh-openvinotoolkit.png	https://github.com/openvinotoolkit.png?size=200
 gh-ovg-project.png	https://github.com/ovg-project.png?size=200
@@ -79,3 +81,8 @@ gh-unslothai.png	https://github.com/unslothai.png?size=200
 gh-vast-ai.png	https://github.com/vast-ai.png?size=200
 gh-vllm-project.png	https://github.com/vllm-project.png?size=200
 gh-xdit-project.png	https://github.com/xdit-project.png?size=200
+lambda.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+llm-compressor.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+onnxruntime.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+vllm-omni.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+vllm-semantic-router.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18

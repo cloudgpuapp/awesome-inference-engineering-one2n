@@ -142,6 +142,13 @@ def fetch_logos(data):
         for path, url in todo.items():
             pool.submit(_download, path, url)
     socket.getaddrinfo = getaddrinfo
+    # Keep hand-added entries for logo files that are not GitHub avatars.
+    listing = LOGOS / "SOURCES.txt"
+    if listing.exists():
+        for line in listing.read_text(encoding="ascii").splitlines():
+            name = line.split("\t", 1)[0]
+            if "\t" in line and not line.startswith("#") and not name.startswith("gh-"):
+                sources.setdefault(name, line.split("\t", 1)[1])
     lines = [f"{name}\t{url}" for name, url in sorted(sources.items()) if (LOGOS / name).exists()]
     (LOGOS / "SOURCES.txt").write_text(
         "# logo file<TAB>source. Logos are trademarks of their respective owners.\n" + "\n".join(lines) + "\n",
