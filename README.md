@@ -54,7 +54,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
   - [6.6 Cost and efficiency](#cost-and-efficiency)
 - [7. Learning resources](#learning)
   - [7.1 Courses and books](#courses-and-books)
-  - [7.2 GitHub repositories](#github-repositories)
+  - [7.2 Repositories and reading lists](#repositories-and-reading-lists)
   - [7.3 Talks](#talks)
 - [Contributing](#contributing)
 - [License](#license)
@@ -126,6 +126,7 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 
 - [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - Prefill and decode, compute and memory limits, batching and KV-cache trade-offs.
 - [Top 5 AI Model Optimization Techniques for Faster, Smarter Inference](https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/) - Post-training quantization, quantization-aware training, quantization-aware distillation, speculative decoding and pruning with distillation.
+- [Inference Performance from First Principles](https://aleph-alpha.com/en/blog/inference-performance-from-first-principles/) - Aleph Alpha's analytical model of prefill and decode bottlenecks across compute, memory movement and communication, for dense and MoE models.
 
 <a id="model-strategy"></a>
 
@@ -564,13 +565,14 @@ It starts with the basics of model serving, then goes deeper into the hardware a
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) - Hugging Face's interactive guide to parallelism and communication for training LLMs on GPU clusters.
 - [Hands-On LLM Serving and Optimization](https://www.oreilly.com/library/view/hands-on-llm-serving/9798341621480/) - Chi Wang and Peiheng Hu's O'Reilly book on hosting and optimizing LLMs at scale.
 
-<a id="github-repositories"></a>
+<a id="repositories-and-reading-lists"></a>
 
-### 7.2 GitHub repositories
+### 7.2 Repositories and reading lists
 
 - [100 Days of LLM Inference](https://github.com/elizabetht/100-days-of-inference) - Day-by-day runnable experiments that follow the Inference Engineering book, from KV cache and kernels to quantization, speculative decoding and disaggregated serving.
 - [LLM Inference Engineering](https://github.com/amitshekhariitbhu/llm-inference-engineering) - Step-by-step blog series from autoregressive generation, prefill and decode to KV cache, PagedAttention, continuous batching, vLLM, SGLang and GPUs.
 - [AI Inference Resources](https://github.com/aerlabsAI/ai-inference-resources) - AER Labs' tiered reading guide covering LLM serving, GPU kernels, attention, quantization, distributed inference and production deployment.
+- [Inference Engineering Library](https://inference-engineering-library.danialh.chatgpt.site/) - Community-shared books, courses, code and research for inference engineering, filterable by format and level.
 
 <a id="talks"></a>
 
