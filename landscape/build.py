@@ -159,33 +159,35 @@ def fetch_logos(data):
 # ---------------------------------------------------------------- rendering
 
 CSS = """
+@font-face { font-family: "Landscape Inter"; src: url("%(font)s") format("truetype"); font-weight: 100 900; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { width: %(w)dpx; background: #0a0e17; color: #e5e7eb; padding: 36px 32px 28px;
-       font-family: Inter, "Noto Sans", "Liberation Sans", Arial, sans-serif; }
-h1 { text-align: center; font-size: 60px; font-weight: 800; color: #fff; margin-bottom: 28px; letter-spacing: -0.5px; }
-.section { margin-bottom: 26px; }
-.shead { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.num { width: 40px; height: 40px; border-radius: 50%%; display: flex; align-items: center; justify-content: center;
-       font-weight: 700; font-size: 20px; color: #0a0e17; }
-.shead h2 { font-size: 36px; font-weight: 800; color: #fff; white-space: nowrap; }
+body { width: %(w)dpx; background: #0a0e17; color: #e5e7eb; padding: 40px 32px 32px;
+       font-family: "Landscape Inter", Inter, "Noto Sans", Arial, sans-serif; }
+h1 { text-align: center; font-size: 70px; font-weight: 800; color: #fff; margin-bottom: 34px; letter-spacing: -0.5px; }
+.section { margin-bottom: 34px; }
+.shead { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.num { width: 44px; height: 44px; border-radius: 50%%; display: flex; align-items: center; justify-content: center;
+       font-weight: 700; font-size: 22px; color: #0a0e17; }
+.shead h2 { font-size: 42px; font-weight: 800; color: #fff; white-space: nowrap; letter-spacing: -0.5px; }
 .shead .rule { flex: 1; height: 2px; opacity: .55; }
-.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.card { background: #111725; border-radius: 10px; border-top: 2px solid; padding: 14px 10px 16px; }
-.card h3 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .3px; margin: 0 4px 12px; }
-.tiles { display: grid; grid-template-columns: repeat(4, 1fr); row-gap: 14px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.card { background: #111725; border-radius: 10px; border-top: 2px solid; padding: 16px 10px 22px; }
+.card h3 { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: .2px; margin: 0 4px 16px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); row-gap: 20px; }
 .tile { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.icon { width: 78px; height: 78px; border-radius: 14px; background: #f8fafc; display: flex; flex-direction: column;
+.icon { width: 86px; height: 86px; border-radius: 16px; background: #f8fafc; display: flex; flex-direction: column;
         align-items: center; justify-content: center; overflow: hidden; }
-.icon img { width: 78px; height: 78px; object-fit: contain; }
+.icon img { width: 86px; height: 86px; object-fit: contain; }
 .badge { font-weight: 800; line-height: 1; }
-.sub { font-size: 10px; font-weight: 600; color: #6b7280; margin-top: 4px; }
-.label { font-size: 15px; font-weight: 700; color: #f3f4f6; margin-top: 8px; line-height: 1.2; max-width: 104px; }
-footer { display: flex; justify-content: space-between; font-size: 15px; color: #9ca3af; margin-top: 6px; }
+.sub { font-size: 11px; font-weight: 600; color: #6b7280; margin-top: 4px; }
+.label { font-size: 18px; font-weight: 700; color: #f3f4f6; margin-top: 10px; line-height: 1.2; max-width: 108px; }
+footer { display: flex; justify-content: space-between; font-size: 17px; color: #9ca3af; margin-top: 10px; }
 """
+FONT = HERE / "fonts" / "Inter-Variable.ttf"
 
 
 def badge_size(text):
-    return {1: 34, 2: 30, 3: 27, 4: 23, 5: 20}.get(len(text), 16)
+    return {1: 38, 2: 34, 3: 30, 4: 26, 5: 22}.get(len(text), 18)
 
 
 def render_tile(tile, color):
@@ -197,12 +199,15 @@ def render_tile(tile, color):
         sub = f'<div class="sub">{html.escape(tile["sub"])}</div>' if tile.get("sub") else ""
         icon = (f'<div class="badge" style="color:{color};font-size:{badge_size(badge)}px">'
                 f"{html.escape(badge)}</div>{sub}")
+    # Shrink labels whose longest word would overflow the tile column (about 10 characters at 18px).
+    longest = max(len(w) for w in tile["name"].split())
+    style = f' style="font-size:{max(12, 180 // longest)}px"' if longest > 10 else ""
     return (f'<div class="tile"><div class="icon">{icon}</div>'
-            f'<div class="label">{html.escape(tile["name"])}</div></div>')
+            f'<div class="label"{style}>{html.escape(tile["name"])}</div></div>')
 
 
 def render_html(data):
-    out = [f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS % {'w': PAGE_WIDTH}}</style></head><body>",
+    out = [f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS % {'w': PAGE_WIDTH, 'font': FONT.as_uri()}}</style></head><body>",
            f"<h1>{html.escape(data['title'])}</h1>"]
     for sec in data["section"]:
         c = sec["color"]
