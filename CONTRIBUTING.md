@@ -40,6 +40,31 @@ Include paper title, publication year, link, code if available, technical contri
 
 For benchmark submissions, supply the accelerator, model revision, precision, serving engine and commit, input/output distributions, concurrency or offered QPS, cache state, methodology, date, and measurements.
 
+## Landscape image
+
+`assets/inference-landscape.png` is generated from `landscape/landscape.toml`. Do not edit the PNG directly.
+
+A tile is optional. Add one only for a tool or concept that belongs on the overview; most README entries do not need one.
+
+To add a tile, add one line to the right card in `landscape/landscape.toml`. Its `link` must exactly match the URL of a README entry, or a README section anchor such as `#kv-cache-basics`:
+
+```toml
+{ name = "XGrammar", logo = "gh", link = "https://github.com/mlc-ai/xgrammar" },
+```
+
+Use `logo = "gh"` for the repo owner's GitHub avatar, `logo = "gh:owner"` for another GitHub owner, or a file in `landscape/logos/`. Without a logo, set `badge` (short text) and optionally `sub` (vendor).
+
+Commands (Python 3.11+; rendering also needs Chromium or Chrome):
+
+```sh
+python3 landscape/build.py --check-only     # validate tiles against README.md and list uncovered sections
+python3 landscape/build.py --fetch-logos    # download missing GitHub avatars into landscape/logos/
+python3 landscape/build.py                  # render a preview to landscape/build/ (not committed)
+python3 landscape/build.py --out assets/inference-landscape.png   # maintainers: publish the image
+```
+
+Run `--check-only` before opening a pull request. Maintainers regenerate the published image so renders stay consistent.
+
 ## Review checklist
 
 - [ ] The link works and the entry is not duplicated.
@@ -47,7 +72,8 @@ For benchmark submissions, supply the accelerator, model revision, precision, se
 - [ ] Inference relevance is apparent.
 - [ ] Maintenance status is disclosed if necessary.
 - [ ] Performance claims have context and provenance.
+- [ ] If a tile was added, `python3 landscape/build.py --check-only` passes.
 
 Maintainers may decline submissions to keep the list curated rather than exhaustive.
 
-Run `python .github/scripts/check_internal_links.py` to check local files and section anchors.
+Run `python3 .github/scripts/check_internal_links.py` to check local files and section anchors.

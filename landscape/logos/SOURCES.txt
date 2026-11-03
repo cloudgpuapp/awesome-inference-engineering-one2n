@@ -1,0 +1,88 @@
+# logo file<TAB>source. Logos are trademarks of their respective owners.
+aiter.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+executorch.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+genai-bench.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+gh-Arize-ai.png	https://github.com/Arize-ai.png?size=200
+gh-Azure.png	https://github.com/Azure.png?size=200
+gh-BerriAI.png	https://github.com/BerriAI.png?size=200
+gh-Comfy-Org.png	https://github.com/Comfy-Org.png?size=200
+gh-Dao-AILab.png	https://github.com/Dao-AILab.png?size=200
+gh-EleutherAI.png	https://github.com/EleutherAI.png?size=200
+gh-FasterDecoding.png	https://github.com/FasterDecoding.png?size=200
+gh-GoogleCloudPlatform.png	https://github.com/GoogleCloudPlatform.png?size=200
+gh-Helicone.png	https://github.com/Helicone.png?size=200
+gh-InternLM.png	https://github.com/InternLM.png?size=200
+gh-LMCache.png	https://github.com/LMCache.png?size=200
+gh-ModelCloud.png	https://github.com/ModelCloud.png?size=200
+gh-NVIDIA.png	https://github.com/NVIDIA.png?size=200
+gh-OHF-Voice.png	https://github.com/OHF-Voice.png?size=200
+gh-Portkey-AI.png	https://github.com/Portkey-AI.png?size=200
+gh-Project-HAMi.png	https://github.com/Project-HAMi.png?size=200
+gh-QwenLM.png	https://github.com/QwenLM.png?size=200
+gh-ROCm.png	https://github.com/ROCm.png?size=200
+gh-SYSTRAN.png	https://github.com/SYSTRAN.png?size=200
+gh-SafeAILab.png	https://github.com/SafeAILab.png?size=200
+gh-Tiiny-AI.png	https://github.com/Tiiny-AI.png?size=200
+gh-ai-dynamo.png	https://github.com/ai-dynamo.png?size=200
+gh-amd.png	https://github.com/amd.png?size=200
+gh-apache.png	https://github.com/apache.png?size=200
+gh-apple.png	https://github.com/apple.png?size=200
+gh-aws.png	https://github.com/aws.png?size=200
+gh-basetenlabs.png	https://github.com/basetenlabs.png?size=200
+gh-bentoml.png	https://github.com/bentoml.png?size=200
+gh-bitsandbytes-foundation.png	https://github.com/bitsandbytes-foundation.png?size=200
+gh-confident-ai.png	https://github.com/confident-ai.png?size=200
+gh-coreweave.png	https://github.com/coreweave.png?size=200
+gh-deepseek-ai.png	https://github.com/deepseek-ai.png?size=200
+gh-flashinfer-ai.png	https://github.com/flashinfer-ai.png?size=200
+gh-ggml-org.png	https://github.com/ggml-org.png?size=200
+gh-google-ai-edge.png	https://github.com/google-ai-edge.png?size=200
+gh-google.png	https://github.com/google.png?size=200
+gh-hao-ai-lab.png	https://github.com/hao-ai-lab.png?size=200
+gh-huggingface.png	https://github.com/huggingface.png?size=200
+gh-insight-platform.png	https://github.com/insight-platform.png?size=200
+gh-intel.png	https://github.com/intel.png?size=200
+gh-jax-ml.png	https://github.com/jax-ml.png?size=200
+gh-kaito-project.png	https://github.com/kaito-project.png?size=200
+gh-kedacore.png	https://github.com/kedacore.png?size=200
+gh-kserve.png	https://github.com/kserve.png?size=200
+gh-kubernetes.png	https://github.com/kubernetes.png?size=200
+gh-kvcache-ai.png	https://github.com/kvcache-ai.png?size=200
+gh-kyutai-labs.png	https://github.com/kyutai-labs.png?size=200
+gh-langfuse.png	https://github.com/langfuse.png?size=200
+gh-llm-d.png	https://github.com/llm-d.png?size=200
+gh-microsoft.png	https://github.com/microsoft.png?size=200
+gh-ml-explore.png	https://github.com/ml-explore.png?size=200
+gh-mlc-ai.png	https://github.com/mlc-ai.png?size=200
+gh-mlcommons.png	https://github.com/mlcommons.png?size=200
+gh-modal-labs.png	https://github.com/modal-labs.png?size=200
+gh-mozilla-ai.png	https://github.com/mozilla-ai.png?size=200
+gh-ollama.png	https://github.com/ollama.png?size=200
+gh-open-telemetry.png	https://github.com/open-telemetry.png?size=200
+gh-openvinotoolkit.png	https://github.com/openvinotoolkit.png?size=200
+gh-ovg-project.png	https://github.com/ovg-project.png?size=200
+gh-promptfoo.png	https://github.com/promptfoo.png?size=200
+gh-pytorch.png	https://github.com/pytorch.png?size=200
+gh-ray-project.png	https://github.com/ray-project.png?size=200
+gh-replicate.png	https://github.com/replicate.png?size=200
+gh-roboflow.png	https://github.com/roboflow.png?size=200
+gh-runpod.png	https://github.com/runpod.png?size=200
+gh-safetensors.png	https://github.com/safetensors.png?size=200
+gh-sgl-project.png	https://github.com/sgl-project.png?size=200
+gh-snakers4.png	https://github.com/snakers4.png?size=200
+gh-theagentrouter.png	https://github.com/theagentrouter.png?size=200
+gh-togethercomputer.png	https://github.com/togethercomputer.png?size=200
+gh-traceloop.png	https://github.com/traceloop.png?size=200
+gh-triton-inference-server.png	https://github.com/triton-inference-server.png?size=200
+gh-triton-lang.png	https://github.com/triton-lang.png?size=200
+gh-uccl-project.png	https://github.com/uccl-project.png?size=200
+gh-ultralytics.png	https://github.com/ultralytics.png?size=200
+gh-unslothai.png	https://github.com/unslothai.png?size=200
+gh-vast-ai.png	https://github.com/vast-ai.png?size=200
+gh-vllm-project.png	https://github.com/vllm-project.png?size=200
+gh-xdit-project.png	https://github.com/xdit-project.png?size=200
+lambda.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+llm-compressor.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+onnxruntime.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+vllm-omni.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
+vllm-semantic-router.png	cropped from the hand-made assets/inference-landscape.png at e5c3d18
