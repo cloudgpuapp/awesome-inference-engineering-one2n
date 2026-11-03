@@ -7,6 +7,11 @@ Thanks for helping make this a useful, opinionated inference engineering resourc
 1. Search the README to avoid duplicate entries.
 2. Pick the most precise section in README.md, or propose a new category via an issue.
 3. Add one Markdown bullet: `- [Project](https://github.com/org/repo) - What it offers for inference engineers.`
+   - Papers: `- [Title](https://arxiv.org/abs/xxxx.xxxxx) - **Paper, YYYY**. What it contributes.` Use the initial preprint or publication year.
+   - Commercial books or courses: start the description with `**Paid book**.` or `**Paid course**.`
+   - Archived or maintenance-mode projects kept for background: end the description with `Historical: <status>.`
+   - Research implementations whose methods now ship in production engines: end the description with `Reference code: <where it ships>.`
+   - Use ASCII characters only in entries and prose.
 4. Explain the resource's inference relevance in your pull request.
 5. Use direct, stable links; prefer upstream/source URLs.
 6. Mark a project as archived, unmaintained or historical when appropriate.
