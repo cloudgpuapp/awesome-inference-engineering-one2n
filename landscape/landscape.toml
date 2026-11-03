@@ -1,0 +1,365 @@
+# Source data for assets/inference-landscape.png.
+#
+# Each tile must point at the README: `link` is the exact URL of a README
+# entry, or a section anchor such as "#kv-cache-basics" for concept tiles.
+# A tile shows `logo` if set and the file exists, otherwise a text `badge`
+# (defaults to the first letters of `name`) with an optional `sub` line.
+#   logo = "gh"         GitHub avatar of the owner in `link`
+#   logo = "gh:owner"   GitHub avatar of `owner`
+#   logo = "file.png"   file in landscape/logos/
+#
+# Build:  python3 landscape/build.py [--fetch-logos] [--out PATH]
+
+title = "AI Inference Engineering Landscape"
+footer_left = "Illustrative, not exhaustive. Every concept and tool shown links to a README entry. Logos are trademarks of their respective owners."
+footer_right = "github.com/one2nc/awesome-inference-engineering"
+
+[[section]]
+number = 1
+title = "Inference fundamentals"
+color = "#f472b6"
+
+  [[section.card]]
+  title = "Core concepts"
+  tiles = [
+    { name = "Attention", badge = "QKV", link = "#transformers-and-attention" },
+    { name = "KV cache", badge = "KV", link = "#kv-cache-basics" },
+    { name = "PagedAttention", badge = "PA", link = "https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/" },
+    { name = "Prefill & decode", badge = "P/D", link = "#prefill-and-decode" },
+    { name = "Mixture of Experts", badge = "MoE", link = "https://huggingface.co/blog/moe" },
+    { name = "Continuous batching", badge = "CB", link = "#batching-and-scheduling" },
+    { name = "Request queueing", badge = "Q", link = "https://huggingface.co/blog/tngtech/llm-performance-request-queueing" },
+  ]
+
+  [[section.card]]
+  title = "Performance & bottlenecks"
+  tiles = [
+    { name = "Latency metrics", badge = "TTFT", link = "#latency-metrics" },
+    { name = "Inference arithmetic", badge = "FLOP", link = "https://kipp.ly/p/transformer-inference-arithmetic" },
+    { name = "Compute vs memory bound", badge = "BW", link = "https://horace.io/brrr_intro.html" },
+    { name = "Roofline model", badge = "RL", link = "https://modal.com/gpu-glossary/perf/roofline-model" },
+    { name = "Optimization techniques", badge = "OPT", link = "#optimization-overview" },
+  ]
+
+  [[section.card]]
+  title = "LLM evaluation"
+  tiles = [
+    { name = "Langfuse", logo = "gh", link = "https://github.com/langfuse/langfuse" },
+    { name = "Arize Phoenix", logo = "gh", link = "https://github.com/Arize-ai/phoenix" },
+    { name = "lm-eval-harness", logo = "gh", link = "https://github.com/EleutherAI/lm-evaluation-harness" },
+    { name = "Lighteval", badge = "LE", sub = "HF", link = "https://github.com/huggingface/lighteval" },
+    { name = "DeepEval", logo = "gh", link = "https://github.com/confident-ai/deepeval" },
+    { name = "promptfoo", logo = "gh", link = "https://github.com/promptfoo/promptfoo" },
+    { name = "Inspect", badge = "IN", link = "https://github.com/UKGovernmentBEIS/inspect_ai" },
+  ]
+
+  [[section.card]]
+  title = "Fine-tuning & adapters"
+  tiles = [
+    { name = "PEFT", badge = "PEFT", sub = "HF", link = "https://github.com/huggingface/peft" },
+    { name = "TRL", badge = "TRL", sub = "HF", link = "https://github.com/huggingface/trl" },
+    { name = "Unsloth", logo = "gh", link = "https://github.com/unslothai/unsloth" },
+    { name = "Axolotl", badge = "AX", link = "https://github.com/axolotl-ai-cloud/axolotl" },
+    { name = "LlamaFactory", badge = "LL", link = "https://github.com/hiyouga/LlamaFactory" },
+  ]
+
+[[section]]
+number = 2
+title = "Hardware"
+color = "#f59e0b"
+
+  [[section.card]]
+  title = "GPU architecture"
+  tiles = [
+    { name = "GPU basics", badge = "GPU", link = "https://hackbot.dad/writing/intro-to-gpus/" },
+    { name = "Scaling Book: GPUs", badge = "SB", sub = "JAX team", link = "https://jax-ml.github.io/scaling-book/gpus/" },
+    { name = "GPU memory", badge = "HBM", link = "https://www.bentoml.com/blog/what-is-gpu-memory-and-why-it-matters-for-llm-inference" },
+  ]
+
+  [[section.card]]
+  title = "GPUs"
+  tiles = [
+    { name = "NVIDIA Hopper", logo = "gh:NVIDIA", link = "https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/" },
+    { name = "NVIDIA Blackwell Ultra", badge = "B300", sub = "NVIDIA", link = "https://developer.nvidia.com/blog/inside-nvidia-blackwell-ultra-the-chip-powering-the-ai-factory-era/" },
+    { name = "NVIDIA Vera Rubin", badge = "VR", sub = "NVIDIA", link = "https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/" },
+    { name = "AMD CDNA 3", logo = "gh:amd", link = "https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/white-papers/amd-cdna-3-white-paper.pdf" },
+    { name = "AMD CDNA 4", badge = "CDNA4", sub = "AMD", link = "https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/white-papers/amd-cdna-4-architecture-whitepaper.pdf" },
+    { name = "ROCm", logo = "gh:ROCm", link = "https://rocm.docs.amd.com/en/latest/" },
+  ]
+
+  [[section.card]]
+  title = "TPUs & Trainium"
+  tiles = [
+    { name = "Google Ironwood TPU", logo = "gh:google", link = "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/" },
+    { name = "TPU architecture", badge = "TPU", sub = "Google", link = "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm" },
+    { name = "AWS Trainium & Inferentia", badge = "Neuron", sub = "AWS", link = "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/" },
+  ]
+
+  [[section.card]]
+  title = "Interconnects & sizing"
+  tiles = [
+    { name = "NVLink", badge = "NVL", sub = "NVIDIA", link = "https://www.nvidia.com/en-us/data-center/nvlink/" },
+    { name = "RoCE", badge = "RoCE", link = "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/" },
+    { name = "Hardware benchmarks", badge = "AA", link = "https://artificialanalysis.ai/hardware-inference-stack/" },
+  ]
+
+[[section]]
+number = 3
+title = "Software"
+color = "#a78bfa"
+
+  [[section.card]]
+  title = "Frameworks, runtimes & formats"
+  tiles = [
+    { name = "PyTorch", logo = "gh", link = "https://github.com/pytorch/pytorch" },
+    { name = "JAX", logo = "gh", link = "https://github.com/jax-ml/jax" },
+    { name = "Transformers", logo = "gh", link = "https://github.com/huggingface/transformers" },
+    { name = "safetensors", logo = "gh", link = "https://github.com/safetensors/safetensors" },
+    { name = "GGUF", badge = "GGUF", sub = "ggml", link = "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md" },
+    { name = "ONNX Runtime", logo = "gh:onnx", link = "https://github.com/microsoft/onnxruntime" },
+    { name = "TensorRT", badge = "TRT", sub = "NVIDIA", link = "https://github.com/NVIDIA/TensorRT" },
+    { name = "OpenVINO", logo = "gh", link = "https://github.com/openvinotoolkit/openvino" },
+  ]
+
+  [[section.card]]
+  title = "Inference engines: DC & cloud"
+  tiles = [
+    { name = "vLLM", logo = "gh", link = "https://github.com/vllm-project/vllm" },
+    { name = "SGLang", logo = "gh", link = "https://github.com/sgl-project/sglang" },
+    { name = "TensorRT-LLM", badge = "TRT-LLM", sub = "NVIDIA", link = "https://github.com/NVIDIA/TensorRT-LLM" },
+    { name = "Triton Inference Server", logo = "gh", link = "https://github.com/triton-inference-server/server" },
+    { name = "LMDeploy", logo = "gh", link = "https://github.com/InternLM/lmdeploy" },
+    { name = "mistral.rs", badge = "MR", link = "https://github.com/EricLBuehler/mistral.rs" },
+  ]
+
+  [[section.card]]
+  title = "Inference engines: local & desktop"
+  tiles = [
+    { name = "llama.cpp", logo = "gh", link = "https://github.com/ggml-org/llama.cpp" },
+    { name = "Ollama", logo = "gh", link = "https://github.com/ollama/ollama" },
+    { name = "llamafile", logo = "gh", link = "https://github.com/mozilla-ai/llamafile" },
+    { name = "LocalAI", badge = "LO", link = "https://github.com/mudler/LocalAI" },
+    { name = "PowerInfer", logo = "gh", link = "https://github.com/Tiiny-AI/PowerInfer" },
+    { name = "AirLLM", badge = "AI", link = "https://github.com/lyogavin/airllm" },
+  ]
+
+  [[section.card]]
+  title = "Inference engines: Apple Silicon"
+  tiles = [
+    { name = "MLX", logo = "gh", link = "https://github.com/ml-explore/mlx" },
+    { name = "vllm-metal", badge = "Metal", sub = "vLLM", link = "https://github.com/vllm-project/vllm-metal" },
+    { name = "Core ML", logo = "gh:apple", link = "https://machinelearning.apple.com/research/core-ml-on-device-llama" },
+  ]
+
+  [[section.card]]
+  title = "Inference engines: mobile & edge"
+  tiles = [
+    { name = "ExecuTorch", badge = "ET", sub = "PyTorch", link = "https://github.com/pytorch/executorch" },
+    { name = "MLC LLM", logo = "gh", link = "https://github.com/mlc-ai/mlc-llm" },
+    { name = "LiteRT-LM", logo = "gh", link = "https://github.com/google-ai-edge/LiteRT-LM" },
+    { name = "MediaPipe LLM", badge = "MP", sub = "Google", link = "https://developers.google.com/edge/mediapipe/solutions/genai/llm_inference" },
+  ]
+
+  [[section.card]]
+  title = "Benchmarking"
+  tiles = [
+    { name = "AIPerf", badge = "AIPerf", sub = "NVIDIA", link = "https://github.com/ai-dynamo/aiperf" },
+    { name = "GuideLLM", badge = "GLLM", sub = "vLLM", link = "https://github.com/vllm-project/guidellm" },
+    { name = "genai-bench", badge = "GB", sub = "SGLang", link = "https://github.com/sgl-project/genai-bench" },
+    { name = "MLPerf Inference", logo = "gh", link = "https://github.com/mlcommons/inference" },
+    { name = "Vidur", logo = "gh", link = "https://github.com/microsoft/vidur" },
+  ]
+
+  [[section.card]]
+  title = "Profiling"
+  tiles = [
+    { name = "Nsight Systems", badge = "nsys", sub = "NVIDIA", link = "https://docs.nvidia.com/nsight-systems/UserGuide/index.html" },
+    { name = "Nsight Compute", badge = "ncu", sub = "NVIDIA", link = "https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html" },
+    { name = "ROCm Systems Profiler", badge = "rp-sys", sub = "AMD", link = "https://rocm.docs.amd.com/projects/rocprofiler-systems/en/latest/" },
+    { name = "ROCm Compute Profiler", badge = "rp-cmp", sub = "AMD", link = "https://rocm.docs.amd.com/projects/rocprofiler-compute/en/latest/" },
+  ]
+
+  [[section.card]]
+  title = "Kernels & compilers"
+  tiles = [
+    { name = "FlashAttention", logo = "gh", link = "https://github.com/Dao-AILab/flash-attention" },
+    { name = "FlashInfer", logo = "gh", link = "https://github.com/flashinfer-ai/flashinfer" },
+    { name = "CUTLASS", badge = "CUTL", sub = "NVIDIA", link = "https://github.com/NVIDIA/cutlass" },
+    { name = "cuDNN", badge = "cuDNN", sub = "NVIDIA", link = "https://github.com/NVIDIA/cudnn-frontend" },
+    { name = "AITER", badge = "AITER", sub = "AMD", link = "https://github.com/ROCm/aiter" },
+    { name = "Composable Kernel", badge = "CK", sub = "AMD", link = "https://github.com/ROCm/rocm-libraries/tree/develop/projects/composablekernel" },
+    { name = "Triton", logo = "gh", link = "https://github.com/triton-lang/triton" },
+    { name = "Apache TVM", logo = "gh", link = "https://github.com/apache/tvm" },
+  ]
+
+[[section]]
+number = 4
+title = "Inference techniques"
+color = "#34d399"
+
+  [[section.card]]
+  title = "Quantization & compression"
+  tiles = [
+    { name = "LLM Compressor", logo = "gh", link = "https://github.com/vllm-project/llm-compressor" },
+    { name = "Model Optimizer", badge = "MO", sub = "NVIDIA", link = "https://github.com/NVIDIA/Model-Optimizer" },
+    { name = "torchao", badge = "ao", sub = "PyTorch", link = "https://github.com/pytorch/ao" },
+    { name = "bitsandbytes", logo = "gh", link = "https://github.com/bitsandbytes-foundation/bitsandbytes" },
+    { name = "GPTQModel", logo = "gh", link = "https://github.com/ModelCloud/GPTQModel" },
+    { name = "AutoRound", logo = "gh", link = "https://github.com/intel/auto-round" },
+  ]
+
+  [[section.card]]
+  title = "Speculative decoding"
+  tiles = [
+    { name = "EAGLE", logo = "gh", link = "https://github.com/SafeAILab/EAGLE" },
+    { name = "Medusa", logo = "gh", link = "https://github.com/FasterDecoding/Medusa" },
+    { name = "Speculators", badge = "SPEC", sub = "vLLM", link = "https://developers.redhat.com/articles/2025/11/19/speculators-standardized-production-ready-speculative-decoding" },
+  ]
+
+  [[section.card]]
+  title = "KV-cache reuse & offload"
+  tiles = [
+    { name = "LMCache", logo = "gh", link = "https://github.com/LMCache/LMCache" },
+    { name = "kvcached", logo = "gh", link = "https://github.com/ovg-project/kvcached" },
+    { name = "PrisKV", badge = "PR", link = "https://aibrix.github.io/posts/2025-11-26-priskv-intro/" },
+    { name = "Mooncake", logo = "gh", link = "https://github.com/kvcache-ai/Mooncake" },
+  ]
+
+  [[section.card]]
+  title = "Parallelism & disaggregation"
+  tiles = [
+    { name = "NCCL", badge = "NCCL", sub = "NVIDIA", link = "https://github.com/NVIDIA/nccl" },
+    { name = "RCCL", badge = "RCCL", sub = "AMD", link = "https://github.com/ROCm/rocm-systems/tree/develop/projects/rccl" },
+    { name = "DeepEP", logo = "gh", link = "https://github.com/deepseek-ai/DeepEP" },
+    { name = "UCCL", logo = "gh", link = "https://github.com/uccl-project/uccl" },
+    { name = "NVIDIA Dynamo", logo = "gh", link = "https://github.com/ai-dynamo/dynamo" },
+    { name = "llm-d", logo = "gh", link = "https://github.com/llm-d/llm-d" },
+  ]
+
+[[section]]
+number = 5
+title = "Omni-modal inference"
+color = "#22d3ee"
+
+  [[section.card]]
+  title = "Omni-modal & vision-language"
+  tiles = [
+    { name = "Omni-models", badge = "OMNI", link = "https://www.nvidia.com/en-us/glossary/omni-model/" },
+    { name = "Qwen3-Omni", logo = "gh", link = "https://github.com/QwenLM/Qwen3-Omni" },
+    { name = "vLLM-Omni", badge = "Omni", sub = "vLLM", link = "https://github.com/vllm-project/vllm-omni" },
+    { name = "Vision-language models", badge = "VLM", link = "#vision-language-models" },
+  ]
+
+  [[section.card]]
+  title = "Speech"
+  tiles = [
+    { name = "faster-whisper", logo = "gh", link = "https://github.com/SYSTRAN/faster-whisper" },
+    { name = "whisper.cpp", badge = "w.cpp", sub = "ggml", link = "https://github.com/ggml-org/whisper.cpp" },
+    { name = "Piper", logo = "gh", link = "https://github.com/OHF-Voice/piper1-gpl" },
+    { name = "Silero VAD", logo = "gh", link = "https://github.com/snakers4/silero-vad" },
+    { name = "Moshi", logo = "gh", link = "https://github.com/kyutai-labs/moshi" },
+  ]
+
+  [[section.card]]
+  title = "Vision & video analytics"
+  tiles = [
+    { name = "Ultralytics YOLO", logo = "gh", link = "https://github.com/ultralytics/ultralytics" },
+    { name = "DeepStream", badge = "DS", sub = "NVIDIA", link = "https://github.com/NVIDIA/DeepStream" },
+    { name = "Savant", logo = "gh", link = "https://github.com/insight-platform/Savant" },
+    { name = "Intel DL Streamer", logo = "gh:intel", link = "https://github.com/open-edge-platform/dlstreamer" },
+    { name = "Roboflow Inference", logo = "gh", link = "https://github.com/roboflow/inference" },
+  ]
+
+  [[section.card]]
+  title = "Image & video generation"
+  tiles = [
+    { name = "Diffusers", badge = "DIFF", sub = "HF", link = "https://github.com/huggingface/diffusers" },
+    { name = "ComfyUI", logo = "gh", link = "https://github.com/Comfy-Org/ComfyUI" },
+    { name = "SGLang Diffusion", badge = "SGL-D", sub = "SGLang", link = "https://www.lmsys.org/blog/2025-11-07-sglang-diffusion/" },
+    { name = "xDiT", logo = "gh", link = "https://github.com/xdit-project/xDiT" },
+    { name = "FastVideo", logo = "gh", link = "https://github.com/hao-ai-lab/FastVideo" },
+  ]
+
+[[section]]
+number = 6
+title = "Production inference"
+color = "#60a5fa"
+
+  [[section.card]]
+  title = "Containers & model packaging"
+  tiles = [
+    { name = "NVIDIA Container Toolkit", badge = "NCT", sub = "NVIDIA", link = "https://github.com/NVIDIA/nvidia-container-toolkit" },
+    { name = "AMD Container Toolkit", badge = "ACT", sub = "AMD", link = "https://github.com/ROCm/container-toolkit" },
+    { name = "NVIDIA NIM", badge = "NIM", sub = "NVIDIA", link = "https://docs.nvidia.com/nim/" },
+    { name = "BentoML", logo = "gh", link = "https://github.com/bentoml/BentoML" },
+  ]
+
+  [[section.card]]
+  title = "Kubernetes GPU enablement"
+  tiles = [
+    { name = "NVIDIA GPU Operator", badge = "GOP", sub = "NVIDIA", link = "https://github.com/NVIDIA/gpu-operator" },
+    { name = "NVIDIA Device Plugin", badge = "NDP", sub = "NVIDIA", link = "https://github.com/NVIDIA/k8s-device-plugin" },
+    { name = "AMD GPU Operator", badge = "AGO", sub = "AMD", link = "https://github.com/ROCm/gpu-operator" },
+    { name = "AMD Device Plugin", badge = "ADP", sub = "AMD", link = "https://github.com/ROCm/k8s-device-plugin" },
+  ]
+
+  [[section.card]]
+  title = "Kubernetes serving platforms"
+  tiles = [
+    { name = "KServe", logo = "gh", link = "https://github.com/kserve/kserve" },
+    { name = "Ray Serve", logo = "gh", link = "https://github.com/ray-project/ray" },
+    { name = "vLLM Production Stack", badge = "PS", sub = "vLLM", link = "https://github.com/vllm-project/production-stack" },
+    { name = "AIBrix", badge = "AIB", sub = "vLLM", link = "https://github.com/vllm-project/aibrix" },
+    { name = "KAITO", logo = "gh", link = "https://github.com/kaito-project/kaito" },
+    { name = "HAMi", logo = "gh", link = "https://github.com/Project-HAMi/HAMi" },
+  ]
+
+  [[section.card]]
+  title = "AI gateways"
+  tiles = [
+    { name = "LiteLLM", logo = "gh", link = "https://github.com/BerriAI/litellm" },
+    { name = "Portkey Gateway", logo = "gh", link = "https://github.com/Portkey-AI/gateway" },
+    { name = "Agent Router", logo = "gh", link = "https://github.com/theagentrouter/agent-router" },
+  ]
+
+  [[section.card]]
+  title = "Routing & autoscaling"
+  tiles = [
+    { name = "Gateway API Inference Ext.", logo = "gh:kubernetes", link = "https://github.com/kubernetes-sigs/gateway-api-inference-extension" },
+    { name = "llm-d Router", badge = "LLMD-R", sub = "llm-d", link = "https://github.com/llm-d/llm-d-router" },
+    { name = "vLLM Semantic Router", badge = "VSR", sub = "vLLM", link = "https://github.com/vllm-project/semantic-router" },
+    { name = "KEDA", logo = "gh:kedacore", link = "https://github.com/kedacore/keda" },
+  ]
+
+  [[section.card]]
+  title = "Cloud & GPU hosting"
+  tiles = [
+    { name = "AWS (EKS)", logo = "gh:aws", link = "https://docs.aws.amazon.com/eks/latest/userguide/ml-inference-load-serve-model.html" },
+    { name = "Google Cloud (GKE)", logo = "gh:GoogleCloudPlatform", link = "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/deploy-gke-inference-gateway" },
+    { name = "Azure (AKS)", logo = "gh:Azure", link = "https://learn.microsoft.com/en-us/azure/aks/ai-toolchain-operator" },
+    { name = "Lambda", badge = "L", link = "https://docs.lambda.ai/education/large-language-models/serving-llama-3-1-docker/" },
+    { name = "CoreWeave", logo = "gh:coreweave", link = "https://docs.coreweave.com/products/inference" },
+    { name = "Vast.ai", logo = "gh:vast-ai", link = "https://docs.vast.ai/vllm-llm-inference-and-serving" },
+    { name = "E2E Networks", badge = "E2E", link = "https://docs.e2enetworks.com/docs/myaccount/gpu/guides/serve-llm-inference" },
+  ]
+
+  [[section.card]]
+  title = "Managed inference endpoints"
+  tiles = [
+    { name = "RunPod Serverless", logo = "gh:runpod", link = "https://docs.runpod.io/serverless/vllm/overview" },
+    { name = "Replicate", logo = "gh:replicate", link = "https://replicate.com/docs/get-started/deploy-a-custom-model" },
+    { name = "Modal", logo = "gh:modal-labs", link = "https://modal.com/docs/examples/llm_inference" },
+    { name = "Baseten", logo = "gh:basetenlabs", link = "https://docs.baseten.co/deployment/concepts" },
+    { name = "HF Inference Endpoints", badge = "HFIE", sub = "HF", link = "https://huggingface.co/docs/inference-endpoints/index" },
+    { name = "Together AI", logo = "gh:togethercomputer", link = "https://docs.together.ai/docs/dedicated-endpoints/overview" },
+  ]
+
+  [[section.card]]
+  title = "Observability"
+  tiles = [
+    { name = "DCGM Exporter", badge = "DCGM", sub = "NVIDIA", link = "https://github.com/NVIDIA/dcgm-exporter" },
+    { name = "AMD Metrics Exporter", badge = "AME", sub = "AMD", link = "https://github.com/ROCm/device-metrics-exporter" },
+    { name = "OTel GenAI conventions", logo = "gh:open-telemetry", link = "https://opentelemetry.io/docs/specs/semconv/gen-ai/" },
+    { name = "OpenLLMetry", logo = "gh:traceloop", link = "https://github.com/traceloop/openllmetry" },
+    { name = "Helicone", logo = "gh", link = "https://github.com/Helicone/helicone" },
+  ]
