@@ -20,8 +20,6 @@ Choose a path, then use the topic index for deeper reading. The order within eac
 | Deploy a first model | [Model selection and evaluation](#model-strategy) -> [engine selection](#inference-engines) -> [sizing](#instances-and-interconnects) -> [containers](#containers-and-gpus) -> [benchmarking methodology](#benchmarking-and-profiling) | Serve one model and measure its quality and latency against a representative workload. |
 | Improve production serving | [Benchmarking and profiling](#benchmarking-and-profiling) -> [optimization choices](#optimization-overview) -> [quantization](#quantization) -> [structured output](#structured-output) -> [reliability](#serving-reliability) -> [cost](#cost-and-efficiency) | Identify a bottleneck, change one variable and verify latency, quality and cost. |
 
-Tags: **Paper, YYYY** marks research papers; **Paid** marks commercial books; **Historical** marks archived projects kept for background; **Reference code** marks research implementations whose methods now ship in production engines. Vendor benchmark results describe their tested configurations.
-
 <a id="contents"></a>
 
 ## Table of contents
