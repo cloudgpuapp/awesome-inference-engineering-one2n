@@ -391,7 +391,6 @@ Choose a path, then use the topic index for deeper reading. The order within eac
 - [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/) - NVIDIA's reference for the CUDA programming model, memory hierarchy and execution.
 - [HIP Documentation](https://rocm.docs.amd.com/projects/HIP/en/latest/) - AMD's C++ GPU programming model and runtime, with a porting path from CUDA.
 - [Gluon Tutorials](https://github.com/triton-lang/triton/tree/main/python/tutorials/gluon) - Triton's lower-level language for explicit control over layouts and memory.
-- [Learn by Doing: TorchInductor Reduction Kernels](https://karthick.ai/blog/2025/Learn-By-Doing-Torchinductor-Reduction/) - How TorchInductor generates reduction kernels.
 - [Apache TVM](https://github.com/apache/tvm) - Open machine learning compiler framework.
 - [XLA](https://github.com/openxla/xla) - Machine learning compiler for GPUs, CPUs and TPUs, used by JAX.
 - [IREE](https://github.com/iree-org/iree) - MLIR-based compiler and runtime for deploying models from datacenter to edge.
